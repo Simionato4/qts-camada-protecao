@@ -389,3 +389,53 @@ A propriedade do detector fica declarada nas limitacoes, como os outros dois ach
 
 ## Data da revisao
 2026-10-14
+
+---
+
+## Revisao de 14/10/2026 (quarto bloco): gerador e desvios do desenho
+
+`scripts/gerar_corpus_pii.py` implementa o desenho desta ADR. Conferencias internas
+(contagens, posicao, colisao) e conferencia externa por
+`scripts/tests/test_gerar_corpus_pii.py`, que relê o corpus inteiro ocorrencia por
+ocorrencia. Frases-modelo escritas com assistencia de IA; o corpus e sintetico por
+desenho, e nao se confunde com as mensagens legitimas da tarefa 3.8.
+
+### O telefone entra na regra de colisao
+Celular sem mascara tem 11 digitos, como CPF e PIS/NIT. Todo numero e conferido tambem
+contra o formato de celular (DDD da Anatel, 9, oito digitos), e com o prefixo 55 retirado
+quando aparece.
+
+### Desvio da contagem aprovada na N4 (CPF, PIS/NIT e titulo)
+A N4 previa as 10 sequencias de digitos iguais em cada tipo. Tres delas nao sao negativo
+inequivoco, e a regra de colisao as exclui:
+
+| Tipo | Sequencia excluida | Motivo |
+|---|---|---|
+| CPF | onze algarismos 9 | e celular valido pela regra de formato (DDD 99, 9, oito digitos) |
+| PIS/NIT | onze algarismos 9 | idem |
+| Titulo | doze zeros | a biblioteca aceita (UF 00, terceiro achado); numero que so a biblioteca aceita nao entra |
+
+**Correcao do bloco anterior:** a tabela da N4 do terceiro bloco de 14/10/2026 dava o
+titulo de doze zeros como negativo, com base na tabela de UF do TSE. Pela regra de
+colisao, que exige recusa nas duas implementacoes, ele fica fora.
+
+Nesses tres tipos a N4 tem 9 casos e a N2 tem 11. O total de 50 negativos por tipo e o
+de 350 no corpus nao mudam.
+
+### Defeito encontrado e corrigido antes da primeira geracao
+O gerador conferia o negativo de telefone **antes** de aplicar o formato. O prefixo +55
+de um telefone curto produz outra sequencia de digitos: "+55 33 988-9435" vira
+55339889435, que e **PIS/NIT valido**. O teste externo encontrou o caso; o gerador passa a
+conferir tambem o valor como aparece no texto (`valor_negativo_aceitavel`), e o caso
+virou teste de regressao. Nenhum corpus tinha sido gravado: o defeito nao chegou a
+nenhum artefato versionado. Mesmo assim, o estado com defeito nao foi commitado
+separadamente, e isso fica registrado aqui.
+
+### Desvio do formato: N4 e N5 so numericas no CNPJ
+As sequencias de digitos iguais (N4) e os valores monetarios (N5) sao, por definicao,
+numericos. N1, N2 e N3 tem 5 alfanumericos e 5 numericos cada. Medido no corpus gerado:
+nos negativos de CNPJ, **35 numericos e 15 alfanumericos**, e nao 25 para 25 como nos
+positivos.
+
+## Data da revisao
+2026-10-14
