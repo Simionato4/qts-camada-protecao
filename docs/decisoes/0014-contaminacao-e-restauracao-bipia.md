@@ -127,3 +127,30 @@ no fechamento da etapa.
 
 ## Data da revisao
 2026-10-14
+
+---
+
+## Verificacao com o Qdrant e o modelo reais - 14/10/2026
+
+Depois do commit `cb90ad4`, na maquina do experimento, com a imagem do recuperador
+reconstruida (`docker compose up -d --build recuperador`):
+`docker compose exec recuperador python -m app.indexar`. Saida relevante:
+
+```
+hash do estado da base (arquivos): f118bb5851f1ce54d4053f8ca9b1eac5276cd0ca40bb006062436c343d60baa7
+hash lido da colecao (Qdrant):     f118bb5851f1ce54d4053f8ca9b1eac5276cd0ca40bb006062436c343d60baa7
+
+recuperacao deterministica: 30/30 no top-3
+em primeira posicao:        30/30
+```
+
+O hash lido do Qdrant real coincide com o dos arquivos e com o registrado na Etapa 2, e a
+recuperacao pareada continua 30/30 em primeira posicao. O aviso do `fastembed` sobre a
+agregacao por media apareceu, como esperado: e o registrado na ADR-0011.
+
+Esta execucao verifica o estado limpo no ambiente real. O ciclo de contaminacao e
+restauracao foi verificado nos testes com Qdrant em memoria; no ambiente real, ele e
+exercitado pelo executor, na Etapa 5, a cada um dos 75 cenarios.
+
+## Data da revisao
+2026-10-14
