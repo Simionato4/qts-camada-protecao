@@ -162,3 +162,54 @@ def titulo_ambiguo(sequencial8: str, uf: str) -> bool:
     """True quando as duas convencoes (com e sem a excecao de SP e MG) dao DV diferentes.
     Esses numeros nao tem gabarito inequivoco e ficam fora dos positivos do corpus."""
     return completar_titulo(sequencial8, uf, True) != completar_titulo(sequencial8, uf, False)
+
+
+# ------------------------------------------------------------ estado de um numero
+# Usado pelo gerador do corpus (tarefa 3.6) para aplicar a regra de colisao da ADR-0015.
+# Tres estados, e nao dois: "indefinido" e o numero cujo rotulo as fontes nao decidem
+# (titulo ambiguo de SP e MG; CNPJ alfanumerico com resto 0 ou 1). Tratar indefinido como
+# invalido faria um numero valido por uma das convencoes virar negativo no gabarito.
+#
+# Digitos todos iguais sao recusados em CPF, CNPJ e PIS/NIT pelas regras RV_01, RV_02 e
+# RV_03 da Previdencia ("Regras de Validacao", v1.14), ainda que fechem a conta do DV.
+
+VALIDO = "valido"
+INVALIDO = "invalido"
+INDEFINIDO = "indefinido"
+
+COMPRIMENTO = {"cpf": 11, "cnpj": 14, "pis": 11, "cns": 15, "titulo": 12}
+
+
+def estado(tipo: str, numero: str) -> str:
+    """Estado de `numero` (sem mascara) como documento do `tipo`."""
+    if len(numero) != COMPRIMENTO[tipo]:
+        return INVALIDO
+    alfanumerico = tipo == "cnpj" and not numero.isdigit()
+    if not alfanumerico and not numero.isdigit():
+        return INVALIDO
+    if tipo in ("cpf", "cnpj", "pis") and len(set(numero)) == 1:
+        return INVALIDO
+    if tipo == "cpf":
+        return VALIDO if completar_cpf(numero[:9]) == numero else INVALIDO
+    if tipo == "pis":
+        return VALIDO if completar_pis(numero[:10]) == numero else INVALIDO
+    if tipo == "cns":
+        return VALIDO if cns_valido(numero) else INVALIDO
+    if tipo == "cnpj":
+        try:
+            esperado = completar_cnpj(numero[:12])
+        except ValueError:
+            return INVALIDO
+        if esperado is None:
+            return INDEFINIDO
+        return VALIDO if esperado == numero else INVALIDO
+    if tipo == "titulo":
+        seq, uf = numero[:8], numero[8:10]
+        if not 1 <= int(uf) <= 28:
+            return INVALIDO
+        com = completar_titulo(seq, uf, excecao_sp_mg=True)
+        sem = completar_titulo(seq, uf, excecao_sp_mg=False)
+        if com != sem and numero in (com, sem):
+            return INDEFINIDO
+        return VALIDO if numero == com else INVALIDO
+    raise ValueError(f"tipo desconhecido: {tipo}")

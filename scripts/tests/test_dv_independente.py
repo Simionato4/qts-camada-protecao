@@ -171,3 +171,63 @@ def test_gerados_pela_biblioteca_sao_aceitos_aqui(classe, aceita):
     for _ in range(N):
         n = classe().generate()
         assert aceita(n), n
+
+
+# ------------------------------------------------------------- estado (tres valores)
+
+def test_repetidos_sao_invalidos_em_cpf_cnpj_e_pis_mesmo_fechando_a_conta():
+    # 111.111.111-11 fecha a conta do DV do CPF; a regra RV_01 o recusa.
+    assert dv.completar_cpf("111111111") == "11111111111"
+    for d in "0123456789":
+        assert dv.estado("cpf", d * 11) == dv.INVALIDO
+        assert dv.estado("cnpj", d * 14) == dv.INVALIDO
+        assert dv.estado("pis", d * 11) == dv.INVALIDO
+
+
+def test_titulo_com_uf_fora_da_tabela_do_tse_e_invalido():
+    for uf in ("00", "29", "99"):
+        numero = dv.completar_titulo("12345678", "01", excecao_sp_mg=False)[:8] + uf
+        assert dv.estado("titulo", numero + "00") == dv.INVALIDO
+
+
+def test_biblioteca_aceita_titulo_com_uf_fora_da_tabela():
+    """ACHADO (ADR-0015): a validate-docbr 2.0.0 nao confere a UF; aceita 00 e 29 a 99
+    quando a conta do DV fecha."""
+    for uf in ("00", "29", "99"):
+        s = [int(c) for c in "12345678"]
+        r = sum(a * b for a, b in zip(s, range(2, 10))) % 11
+        d1 = 0 if r == 10 else r
+        r2 = (int(uf[0]) * 7 + int(uf[1]) * 8 + d1 * 9) % 11
+        numero = "12345678" + uf + f"{d1}{0 if r2 == 10 else r2}"
+        assert TituloEleitoral().validate(numero)
+        assert dv.estado("titulo", numero) == dv.INVALIDO
+
+
+def test_titulo_ambiguo_e_indefinido_nas_duas_convencoes():
+    s = random.Random(SEMENTE)
+    while True:
+        seq, uf = _base(s, 8), s.choice(["01", "02"])
+        if dv.titulo_ambiguo(seq, uf):
+            break
+    assert dv.estado("titulo", dv.completar_titulo(seq, uf, True)) == dv.INDEFINIDO
+    assert dv.estado("titulo", dv.completar_titulo(seq, uf, False)) == dv.INDEFINIDO
+
+
+def test_cnpj_alfanumerico_sem_regra_para_o_resto_e_indefinido():
+    s = random.Random(SEMENTE)
+    while True:
+        base = _base(s, 12, string.digits + string.ascii_uppercase)
+        if not base.isdigit() and dv.completar_cnpj(base) is None:
+            break
+    assert dv.estado("cnpj", base + "00") == dv.INDEFINIDO
+
+
+def test_estado_concorda_com_completar_nos_validos():
+    s = random.Random(SEMENTE)
+    for _ in range(N):
+        assert dv.estado("cpf", dv.completar_cpf(_base(s, 9))) in (dv.VALIDO, dv.INVALIDO)
+        assert dv.estado("pis", dv.completar_pis(_base(s, 10))) in (dv.VALIDO, dv.INVALIDO)
+    assert dv.estado("cpf", "28001238938") == dv.VALIDO
+    assert dv.estado("cnpj", "18781203000128") == dv.VALIDO
+    assert dv.estado("cnpj", "12ABC34501DE35") == dv.VALIDO
+    assert dv.estado("titulo", "102385010671") == dv.VALIDO

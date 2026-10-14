@@ -327,3 +327,65 @@ na 3.11.
 
 ## Data da revisao
 2026-10-14
+
+---
+
+## Revisao de 14/10/2026 (terceiro bloco): insumos da geracao
+
+Decisoes do autor, 14/10/2026, antes da escrita do gerador (tarefa 3.6).
+
+### CNPJ: 25 numericos e 25 alfanumericos
+Nos 50 positivos e, na mesma proporcao, nos negativos. O formato fica registrado como
+atributo da ocorrencia e o resultado do CNPJ e reportado separado por formato. Motivo:
+mede se cada detector reconhece o formato atribuido desde julho de 2026 (pergunta 14 da
+Receita Federal, ja citada), com amostra que ainda permite leitura.
+
+### Telefone: DDDs da Anatel e formato do numero movel
+
+| Campo | Registro |
+|---|---|
+| Claim | existem 67 Codigos Nacionais (DDD): 11-19, 21, 22, 24, 27, 28, 31-35, 37, 38, 41-49, 51, 53-55, 61-69, 71, 73-75, 77, 79, 81-89, 91-99 |
+| Fonte | Anatel, "Perguntas Frequentes - Areas Tarifarias", pergunta 6 (cita a Resolucao 768/2024 e o Acordao 202/2025). Duas copias publicadas pela Anatel, lidas em separado, dao a mesma lista: https://sistemas.anatel.gov.br/anexar-api/publico/anexos/download/7c51a53e26edf77426cb85e42f1080de e https://sistemas.anatel.gov.br/anexar-api/publico/anexos/download/a8c6650c72539ff2334c327ab5c169e4 |
+| Nivel | documento oficial da Anatel (sem numero de ato proprio) |
+| Data da consulta | 2026-10-14 |
+| Observacao | o documento afirma que "as areas locais serao equivalentes as areas dos 67 codigos DDD existentes" e que a mudanca nao altera o numero do usuario |
+
+| Campo | Registro |
+|---|---|
+| Claim | o numero do servico movel tem 9 digitos, com o 9 a esquerda; o fixo tem 8 |
+| Fonte | "Caderno Tecnico de Comunicacao - Requisitos de Comunicacao para a Implantacao do Nono Digito", GT-COM, 22/07/2016, publicado no sistema da Anatel, com base na Resolucao Anatel 553/2010: https://sistemas.anatel.gov.br/anexar-api/publico/anexos/download/1cb95a68db5a9c02bfe2196d5f7c112b |
+| Nivel | documentacao tecnica publicada pela Anatel, nao o ato normativo |
+| Data da consulta | 2026-10-14 |
+| Lacuna | a fonte nao diz qual pode ser o primeiro digito do numero fixo |
+
+**Decisao:** os 50 telefones positivos sao **moveis**: DDD da lista acima, seguido de 9 e
+de 8 digitos sorteados. Telefone fixo fica fora, porque a regra do primeiro digito nao tem
+fonte. A variacao de formato exigida pelo RQ-02 vem das mascaras: com parenteses e hifen,
+so digitos, com codigo do pais e com espacos.
+
+### N4 por tipo: base de cada negativo
+Medido na maquina do experimento, sobre as 10 sequencias de digitos iguais de cada tipo:
+
+| Tipo | Quantas fecham a conta do DV | Base do rotulo negativo |
+|---|---|---|
+| CPF | 10 de 10 | regra RV_01 da Previdencia (digitos todos iguais) |
+| CNPJ | 1 de 10 (zeros) | regra RV_02 |
+| PIS/NIT | 1 de 10 (zeros) | regra RV_03 |
+| CNS | 0 de 10 | DV invalido |
+| Titulo | a de zeros fecha a conta, com UF 00 | UF fora da tabela do TSE (art. 36 da Resolucao 23.659/2021); as outras nove nao fecham |
+
+`scripts/dv_independente.py` ganha `estado(tipo, numero)`, com tres valores: valido,
+invalido e **indefinido**. Indefinido e o numero cujo rotulo as fontes nao decidem
+(titulo ambiguo de SP e MG; CNPJ alfanumerico com resto 0 ou 1). Sem o terceiro valor, um
+titulo valido por uma das convencoes viraria negativo no gabarito. Numero indefinido nao
+entra no corpus.
+
+### Terceiro achado sobre a biblioteca
+**A `validate-docbr` 2.0.0 nao confere a UF do titulo de eleitor**: aceita 00 e de 29 a
+99 quando a conta do DV fecha. A tabela do TSE vai de 01 a 28. Caracterizado por teste
+(`test_biblioteca_aceita_titulo_com_uf_fora_da_tabela`). Consequencia: pela regra de
+colisao, numero que so a biblioteca aceita nao entra nem como positivo nem como negativo.
+A propriedade do detector fica declarada nas limitacoes, como os outros dois achados.
+
+## Data da revisao
+2026-10-14
