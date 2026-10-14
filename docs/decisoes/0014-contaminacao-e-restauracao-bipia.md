@@ -63,3 +63,67 @@ interrompe a execucao se o hash apos a restauracao divergir do hash da base limp
 
 ## Data
 2026-09-11
+
+---
+
+## Revisao de 14/10/2026: protocolo implementado (tarefa 3.7, RQ-18)
+
+### Decisoes do autor, 14/10/2026
+- **Posicao da carga:** sempre no fim do documento, apos uma quebra de linha. A posicao
+  e a mesma em todos os cenarios e nao e variavel do experimento; testar apenas o fim e
+  limitacao declarada. Nao se afirma aqui onde o BIPIA original insere as cargas.
+- **Atribuicao:** rodizio. As 75 cargas sao embaralhadas com `SEMENTE_MESTRA` e
+  distribuidas em ordem pelos 30 documentos: 15 documentos recebem 3 cargas e 15
+  recebem 2.
+- **Verificacao da restauracao pelo hash lido do Qdrant.**
+
+### Lacuna corrigida
+O RQ-18 pede verificacao "por hash da colecao indexada". O `hash_do_estado`, existente
+desde a Etapa 2, resume os **arquivos de origem**. Uma reindexacao que falhasse no meio
+deixaria os arquivos limpos e a colecao contaminada, e passaria como restaurada.
+`hash_da_colecao` (em `recuperador/app/indice.py`) le de volta os pontos do Qdrant e
+aplica a mesma formula. Restauracao verificada passa a ser
+`hash_da_colecao(indice) == hash_do_estado(documentos_limpos)`.
+
+### Implementacao
+| Arquivo | Papel |
+|---|---|
+| `recuperador/app/contaminacao.py` | `contaminar`: copia da base com a carga no fim do documento alvo; nao altera a base recebida |
+| `recuperador/app/indice.py` | `hash_da_colecao` |
+| `scripts/gerar_cenarios_bipia.py` | atribuicao e registro dos 75 cenarios em `conjunto_teste/selecao/bipia_cenarios.json`, sem texto de carga (ADR-0016) |
+
+Cada cenario registra o caso (mesmo identificador do mapeamento de rotulos), o sha256 da
+carga, o documento alvo, a pergunta pareada e **o hash esperado do estado contaminado**.
+O executor (Etapa 5) confere o hash lido do Qdrant duas vezes por cenario: apos
+contaminar (deve ser o esperado) e apos restaurar (deve ser o limpo). Divergencia
+interrompe a execucao.
+
+Acrescentar a carga no fim nao desloca nenhuma posicao do gabarito de dados pessoais do
+documento: o gabarito continua valido no texto contaminado (verificado por teste).
+
+### Evidencia
+`recuperador/tests/test_contaminacao.py`, com Qdrant em memoria e o modelo degenerado da
+ADR-0012:
+
+- hash lido da colecao limpa igual ao hash dos arquivos;
+- contaminacao altera so o documento alvo e nao altera a base recebida;
+- ciclo limpo, contaminado (hash muda e e o esperado), restaurado (hash volta);
+- documento contaminado recuperado em primeiro lugar pela pergunta pareada;
+- **restauracao que falha no meio e detectada**: com um ponto contaminado reinserido sem
+  recriar a colecao, os arquivos continuam com o hash limpo e a colecao nao;
+- carga vazia e documento inexistente recusados.
+
+Executados em 14/10/2026 num ambiente independente da maquina do experimento: 7 testes
+novos e os 5 de recuperacao pareada, todos aprovados. A execucao que vale como evidencia
+e a da maquina do experimento.
+
+O hash do estado limpo calculado pelo gerador de cenarios,
+`f118bb5851f1ce54d4053f8ca9b1eac5276cd0ca40bb006062436c343d60baa7`, e o mesmo registrado
+em `docs/versoes.md` na Etapa 2: a base nao mudou desde entao.
+
+**RQ-18:** a aceitacao ("procedimento de restauracao scriptado e verificavel por hash da
+colecao indexada") tem evidencia nesta secao. A mudanca de estado do requisito e feita
+no fechamento da etapa.
+
+## Data da revisao
+2026-10-14

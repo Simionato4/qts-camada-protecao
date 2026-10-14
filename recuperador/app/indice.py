@@ -179,3 +179,31 @@ def hash_do_estado(documentos: list[dict]) -> str:
         for d in sorted(documentos, key=lambda x: x["id_documento"])
     ]
     return hashlib.sha256("|".join(partes).encode()).hexdigest()
+
+
+def hash_da_colecao(indice: "IndiceQdrant") -> str:
+    """Hash calculado a partir do que esta DENTRO do Qdrant (RQ-18, ADR-0014).
+
+    `hash_do_estado` resume os arquivos de origem: e o estado esperado. Ele nao prova
+    que a colecao foi restaurada, porque uma reindexacao que falhasse no meio deixaria
+    os arquivos limpos e a colecao contaminada. Esta funcao le de volta os pontos
+    indexados e aplica a mesma formula; restauracao verificada e
+    `hash_da_colecao(indice) == hash_do_estado(documentos_limpos)`.
+    """
+    documentos: list[dict] = []
+    deslocamento = None
+    while True:
+        pontos, deslocamento = indice.cliente.scroll(
+            collection_name=COLECAO,
+            limit=256,
+            offset=deslocamento,
+            with_payload=True,
+            with_vectors=False,
+        )
+        documentos += [
+            {"id_documento": p.payload["id_documento"], "texto": p.payload["texto"]}
+            for p in pontos
+        ]
+        if deslocamento is None:
+            break
+    return hash_do_estado(documentos)

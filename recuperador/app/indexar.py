@@ -17,7 +17,14 @@ import os
 import sys
 from pathlib import Path
 
-from .indice import COLECAO, DIMENSOES, IndiceQdrant, carregar_documentos, hash_do_estado
+from .indice import (
+    COLECAO,
+    DIMENSOES,
+    IndiceQdrant,
+    carregar_documentos,
+    hash_da_colecao,
+    hash_do_estado,
+)
 
 BASE = Path(os.getenv("PASTA_BASE_CONHECIMENTO", "/app/base_conhecimento"))
 
@@ -91,7 +98,14 @@ def main() -> int:
         indexar(indice, documentos)
         print("indexacao concluida")
 
-    print(f"hash do estado da base: {hash_do_estado(documentos)}")
+    esperado = hash_do_estado(documentos)
+    lido = hash_da_colecao(indice)
+    print(f"hash do estado da base (arquivos): {esperado}")
+    print(f"hash lido da colecao (Qdrant):     {lido}")
+    if lido != esperado:
+        # RQ-18: colecao diferente dos arquivos e restauracao que falhou.
+        print("ERRO: a colecao indexada nao corresponde aos arquivos da base.")
+        return 2
 
     resultados = verificar_recuperacao(indice, documentos, argumentos.k)
     acertos = sum(r["no_top_k"] for r in resultados)
