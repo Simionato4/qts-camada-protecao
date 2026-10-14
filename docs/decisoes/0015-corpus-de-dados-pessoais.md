@@ -272,3 +272,58 @@ tratamento do numero sintetico valido que coincida com documento emitido.
 
 ## Data da revisao
 2026-10-14
+
+---
+
+## Revisao de 14/10/2026 (segundo bloco): formato dos textos e dados que coincidam com reais
+
+Decisoes do autor, 14/10/2026. Fecham o desenho do corpus (tarefa 3.5); a geracao e a
+tarefa 3.6.
+
+### Formato dos textos
+- Frases curtas no dominio de atendimento ao cliente de comercio eletronico, o mesmo do
+  assistente de referencia.
+- De 1 a 3 ocorrencias por texto, misturando positivos e negativos no mesmo texto.
+- Mascaras variadas: cada tipo aparece com e sem pontuacao (RQ-02, "formatos variados").
+- Gabarito por posicao no texto **original**, antes de qualquer normalizacao (RQ-07):
+  inicio, fim, tipo, valor, natureza, e `classe_negativo` nos negativos. Mais de uma
+  ocorrencia por texto testa se o mascaramento recai na posicao certa de cada uma.
+- Geracao com semente fixa (`SEMENTE_MESTRA`), reproduzivel e conferida por hash.
+
+### Endereco eletronico: so dominios reservados para exemplo
+
+| Campo | Registro |
+|---|---|
+| Claim | `example.com`, `example.net` e `example.org` sao reservados para documentacao e nao podem ser registrados |
+| Fonte 1 | RFC 2606, "Reserved Top Level DNS Names", BCP 32, junho de 1999, secao 3: https://www.rfc-editor.org/rfc/rfc2606.html |
+| Fonte 2 | RFC 6761, "Special-Use Domain Names", fevereiro de 2013, Standards Track, secao 6.5 (reservados para documentacao, nao registraveis): https://www.rfc-editor.org/rfc/rfc6761.html |
+| Data da consulta | 2026-10-14 |
+| Divergencia | o cabecalho da RFC 6761 declara que atualiza a RFC 2606; a pagina da RFC 2606 consultada nao exibe a indicacao "Updated by". As duas concordam sobre os tres dominios |
+| Decisao | todo endereco eletronico do corpus usa um dos tres dominios. Nenhum pode pertencer a pessoa real |
+
+### Telefone: sem garantia de inexistencia
+Nao foi localizada faixa de numeracao telefonica brasileira reservada para ficcao ou
+documentacao. Os telefones do corpus sao sorteados no formato brasileiro e **podem
+coincidir com numeros em uso**. Declarado como limitacao; nenhum telefone e associado a
+nome ou outro atributo.
+
+### Documentos validos que coincidam com documentos emitidos
+CPF, CNPJ, CNS, PIS/NIT e titulo validos sao sorteados ao acaso e **podem coincidir com
+numeros ja emitidos**. Nao ha como garantir o contrario: um numero com DV valido e, por
+construcao, um numero que poderia ter sido emitido. O que se declara e o mecanismo:
+geracao aleatoria com semente fixa, sem consulta a base alguma, e nenhum numero associado
+a nome, endereco ou outro atributo de pessoa real. Nao se afirma nada sobre a LGPD:
+conformidade juridica esta fora do escopo declarado.
+
+Os nomes, se usados nas frases, vem do Faker `pt_BR` e nunca acompanham documento que
+os identifique como pessoa real.
+
+### Estado da tarefa 3.5
+Desenho fechado: tipos e distribuicao, gabarito independente da biblioteca, regras de
+colisao, classes e contagem dos negativos, formato dos textos e declaracoes sobre dados
+que coincidam com reais. RQ-02 e RQ-03 tem o desenho pronto; o criterio de aceitacao de
+ambos (gabarito versionado com contagens; declaracao no `CONGELADO.md`) se cumpre na 3.6 e
+na 3.11.
+
+## Data da revisao
+2026-10-14
