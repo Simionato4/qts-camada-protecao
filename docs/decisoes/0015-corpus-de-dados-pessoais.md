@@ -197,3 +197,78 @@ Os testes caracterizam as duas divergencias de forma explicita; nao as escondem.
 
 ## Data da revisao
 2026-10-08
+
+---
+
+## Revisao de 14/10/2026: regras dos negativos dificeis e contagem
+
+Decisoes do autor, 14/10/2026. Escritas antes de qualquer geracao (tarefa 3.6).
+
+### Regras que valem para todo o corpus
+
+- **Colisao entre tipos de mesmo comprimento.** CPF e PIS/NIT tem 11 digitos; um numero
+  truncado de outro tipo pode cair no mesmo comprimento. Positivo: valido **so** no
+  proprio tipo, nas duas implementacoes (`validate-docbr` e `scripts/dv_independente.py`).
+  Negativo: invalido em **todos** os tipos do seu comprimento, nas duas implementacoes.
+- **Gabarito dos negativos.** Cada negativo registra tipo imitado, posicao no texto
+  original e `classe_negativo`. E assim que um falso positivo e localizado e contado.
+- **Titulo de eleitor.** Numeros de SP e MG em que as duas convencoes divergem
+  (`titulo_ambiguo`) nao entram nem como positivo nem como negativo.
+
+### Classes para os cinco tipos com digito verificador (CPF, CNPJ, CNS, PIS/NIT, titulo)
+
+| Classe | Regra de geracao | Casos por tipo |
+|---|---|---:|
+| N1 - digito verificador invalido | base valida, com a mascara do tipo, ultimo digito trocado; invalido nas duas implementacoes | 10 |
+| N2 - mesmo comprimento, sem mascara | sequencia de digitos do comprimento do tipo, em contexto de outro identificador (protocolo, nota fiscal, pedido), invalida em todos os tipos do comprimento | 10 |
+| N3 - formato parcial | documento valido com um digito a menos, com e sem mascara | 10 |
+| N4 - repeticao trivial | todos os digitos iguais | 10 |
+| N5 - numero em contexto nao pessoal | valor monetario, CEP ou data com pontuacao parecida com a do tipo | 10 |
+
+Na N4 existem exatamente 10 sequencias de digitos iguais por comprimento (0 a 9): a
+classe as cobre todas. Parte delas fecha a conta do DV (por exemplo, o CPF de onze
+algarismos 1). A recusa de digitos todos iguais esta nas regras RV_01 a RV_03 da
+Previdencia ("Regras de Validacao", v1.14), fonte oficial ja citada nesta ADR.
+
+### Classes para telefone e endereco eletronico (sem digito verificador)
+
+| Tipo | Classe | Regra | Casos |
+|---|---|---|---:|
+| Telefone | T1 - quantidade errada de digitos | DDD seguido de 7 ou de 10 digitos | 25 |
+| Telefone | T2 - sequencia que parece telefone | horario, intervalo numerico ou codigo com a mesma pontuacao | 25 |
+| Endereco eletronico | E1 - incompleto | sem parte local ou sem dominio | 25 |
+| Endereco eletronico | E2 - arroba que nao e endereco | perfil de rede social, nome de arquivo com arroba | 25 |
+
+**Cortadas:**
+- **T3 (telefone de servico publico):** exigiria uma lista oficial de numeros; sem fonte,
+  nao se inventa. Volta so se houver fonte.
+- **E3 (endereco ofuscado legivel, como "nome [arroba] dominio"):** fica **fora do
+  corpus**. Correcao de uma proposta anterior desta mesma tarefa, que a classificava como
+  negativo: um endereco ofuscado continua identificando a pessoa, e o gabarito puniria
+  quem o mascara. Como positivo, ampliaria a normalizacao alem do que a proposta aprovada
+  define (conteudo codificado, caracteres invisiveis e separadores entre digitos).
+  Registrado como trabalho futuro.
+
+### Contagem
+
+| | Positivos | Negativos | Total |
+|---|---:|---:|---:|
+| Cinco tipos com DV | 250 | 250 (5 classes x 10 x 5 tipos) | 500 |
+| Telefone | 50 | 50 (2 classes x 25) | 100 |
+| Endereco eletronico | 50 | 50 (2 classes x 25) | 100 |
+| **Corpus** | **350** | **350** | **700** |
+
+Motivo (alternativa de 25 negativos por tipo descartada): com 50 negativos por tipo e
+nenhum falso positivo observado, o limite superior do intervalo de 95% fica em cerca de
+6% (regra de tres, 3/50); com 25, em cerca de 12%, o que mal separa um detector bom de um
+ruim. O custo de API e zero nos dois casos (ADR-0003). O intervalo por classe, com 10 ou
+25 casos, e largo e declarado junto de cada resultado (RQ-13); a comparacao principal se
+apoia no agregado por tipo.
+
+### Ainda aberto na tarefa 3.5
+Formato dos textos (frases-modelo, mascaras, sobreposicao, mais de uma ocorrencia por
+texto), geracao de telefone e endereco eletronico sem coincidir com dados reais, e o
+tratamento do numero sintetico valido que coincida com documento emitido.
+
+## Data da revisao
+2026-10-14
