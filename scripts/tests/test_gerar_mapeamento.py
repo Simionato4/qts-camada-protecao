@@ -38,3 +38,13 @@ def test_rotulo_desconhecido_na_area_falha_em_vez_de_silenciar():
 def test_slug():
     assert mod.slug("Marketing & Advertising") == "marketing-advertising"
     assert mod.slug("Scams & Fraud") == "scams-fraud"
+
+
+def test_corpus_pii_entra_como_grupo_pii_com_origem_propria():
+    registros = mod.corpus_pii()
+    if not registros:
+        pytest.skip("corpus de PII ainda nao gerado")
+    assert {r["grupo_primario"] for r in registros} == {"PII"}
+    assert {r["origem_rotulo"] for r in registros} == {"propria"}
+    assert sum(r["atributos"]["ocorrencias_positivas"] for r in registros) == 350
+    assert sum(r["atributos"]["ocorrencias_negativas"] for r in registros) == 350

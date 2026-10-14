@@ -19,7 +19,6 @@
     ]
   },
   "pendentes": {
-    "corpus_documentos": "tarefa 3.6 (grupo PII, origem_rotulo propria)",
     "mensagens_legitimas": "tarefa 3.8 (papel controle_legitimo, sem grupo)"
   },
   "registros": [
@@ -15490,6 +15489,5842 @@
         "level": 9
       },
       "sha256_texto": "d9da6a825cba79e5d5d3622fc135d2bd3cef69905c0b79049ef5fe76606a2cdc"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj"
+        ]
+      },
+      "caso_id": "pii-0001",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "3d8ccb47b864d93502b83dbf8c81f1a902d505b999e2e9f028a9e0693308a97b"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0002",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "9f224739b7c6329900adabd4bce3838ff278c223be5c0433eee4509420114fcf"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0003",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "c6f1e715269adbbc3392f10996356d1accda4613f34da943f41a4aae3c8c9309"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0004",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "e73d07097d31ed5b126ca3e2e99e946dbac3bb6ecc759672d9046d54cdd654a5"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0005",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "651085b9acf23d8de7141056f91588128945e27ec56311152976a9f9c50a2a55"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "email",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0006",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "1378c22e7ba7078914deb2e95207e67ddbb351a53eb3e0534c81c1c666d40254"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0007",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "f2ba14498e85e0c29f27ee8fc2496450cbf0a9aac3cb94ea53e08e479bf35b03"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "cpf",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0008",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "e81f49a9d182a56177e6cf11aed6b0fc85d5adc7c7f058ae90714b284c9f778a"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0009",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "d4c639bff15ba3e2062e016cab6674bf9dcc4f9391617c9ed9554e5ca06d4ce6"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf",
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0010",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "f1751da9f3ac65e2a1d883d91a6b48618b193cbc64ddfc0480cdf4ddbb8fceda"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0011",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "0afe94fcf1ca86aa2232b56a73cf4beab908fad0c3332bbfc5e45c2d5fe42a7a"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0012",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "a632324d920f4a9b69d620b2dd94507767bd16e96dbcf36fbbcd40c4d4a1cca9"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0013",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "3264eafb1f04a540f3e197b9d7ff63e4c7cefdc4360b315b59f60e4104b3f3b2"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "telefone",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0014",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "34dba9d2cd111e07a61428be822be9932d97cb249ffa07f992428a886b27f941"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "email",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0015",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "2e116db66213275af12e11f344d07343eed33338e9d6671e2fe96b91838e7039"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0016",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "d2d981ae6e1be68a87f68b3a310b9e6937086b29f3cd7eea68134355c52b38dd"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0017",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "8791c6aa165d8a41b5af3910a70194486196cedc856fd9dd28672ce3ef03f14b"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 3,
+        "tipos": [
+          "cnpj",
+          "telefone",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0018",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "13daaba5f500fdcd37824886a4f93ccc5104e4c9fc8db3440214fddd3beeea3d"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0019",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "567c357715626445ca4870951b758b3a6ef3f944691cc50d5b251638ab520676"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "pis",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0020",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "798b42da488a679fdaba8c06d8e06dd2de6494af0a824b563475dea6c4ef0cbf"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cpf",
+          "pis",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0021",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "42a0b2b4fb337f5b6b23f8385b14d256e679d3f3c26a9306b8ec952589da3d8b"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "pis",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0022",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "0970a5608e9f004152f6f93d2977e6bac5c8a6fc1c8bcd978feb26b129b19534"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj"
+        ]
+      },
+      "caso_id": "pii-0023",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "26ecff81b8c9e5aa1b1dbdff1b5e5bb28eff6bcf7f5ac9add79dbd4323f39b14"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj"
+        ]
+      },
+      "caso_id": "pii-0024",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "84d6b172111cb85216d4069f28c6bceb6ce49b062df06a8d2a464abf08749cd0"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0025",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "9bf236d2591142d79fbffce79e5f055660d204460970c5776350395d75f8dcbc"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "pis",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0026",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "2ede83c3260c5f8b89c642b98fa24b743bd4897692bbd9aa5047ab1e8b6b4090"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 3,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj",
+          "pis",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0027",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "67f7b4e5972478a7b7521cfd78084dee2bb5512be7c2b283fca6fa08a967bcae"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "email",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0028",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "19dc34de966c38130b51915b4da2f62fd690b18717c20aa7c1eb34fc15311cc3"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "pis",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0029",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "ca8e1037a6a0f18a9bc58efb79606d55f88904e2f818deba0cf213757be6abc1"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "cpf",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0030",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "a9a13332f8ae13e1d586827d94e2c19e242c1ffbce18d7191dee5efb9a07cab6"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 3,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns",
+          "pis",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0031",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "f2f6432cc53d9e98e7d096df7dabd92598d6872e0301555e31bee3c39b9c95a3"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0032",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "125ee27559fa23739b5d0c5c6306a156bf4b9dad2672f2f03edf483d5d205d34"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "cns",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0033",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "08e448cd1f5809b2d88b656e88cc095b9fd9feaf9e5703148252da618fe77f95"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "email",
+          "pis",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0034",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "4842d2f1fe28dc476d51bb276d2beba246d3fd94f034fffede3c3042646eeede"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "pis",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0035",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "677bbd7713671fed62af4909e4d47207b0669850131bbe44032f6e302ba7b013"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0036",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "d10662c991c375038cb17e39421ae9f47cf49f86464c9eaed7917cc246ef14f1"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj"
+        ]
+      },
+      "caso_id": "pii-0037",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "a05e7ef7add9cf80c340c2e8925442c16650989ed104ca3683c32e57590c6e79"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0038",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "4e28d1544a012aee54031993b36bf2347623951906d43b8a1309f1303c58b9dd"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 3,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0039",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "bfa13e47b4a3709c649c13be80b2945efc1a44260ecfaa09c6811bf1afcd0715"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0040",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "8f0499393054ae94fb3b15ea50c8a2a56210a1a345afadf55ad78b9c03b89b79"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cpf",
+          "telefone",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0041",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "41d8486eaebba2c926d53a27397fda08a43aa2689827a78307072c72bcedc0e7"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0042",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "3223190e016dc574e6ec0f58bdb022869098036f42f30d50504f0f6669948cab"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0043",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "2b920c8b7ff2d1dd026f87a5fd8f406e81c6c4eebc8a87f1fbd713aa925da5b0"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "email"
+        ]
+      },
+      "caso_id": "pii-0044",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "f08d4f5815479b305f4283355ba0f7b2f46b86eadde1d3b72725d43e678d6785"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0045",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "8b2efb030d21c585a1afd7b59e287ce1c5a358172ce829f4f631508b8bfdf946"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0046",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "d020a42cdc0e4ace2e123f8898965ead01ff73499e84847989dc026117bcc806"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0047",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "f7b88cc1fd6ff231bfcacb28e2320e3f8fdb9073b5f026575c887edbabc04220"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0048",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "514aa77e3ec7febfb546b96c168ddb03af034b3bfb7dbe0b51f46d8787168084"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0049",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "c59c62a52eb6a69f05c6411ffa35278ec4373ad0662e922910c5b05653f9e5a7"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0050",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "2c1ed726e32bb03df553c506a4f535eb46214bd04500cb373b57a6c6a812a39a"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0051",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "21cd3902ee626aeedadfe6b3889d60f0e7b9e5353ce0952ede6ac200629cefd5"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 3,
+        "tipos": [
+          "cnpj",
+          "pis",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0052",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "6db59590b979e806923987705c502e37eb9cb86f49a228337bba3e5d60b82fc8"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "cns",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0053",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "8450d3d8321371d29e8a3126aa721581bc035d280ca4d6682f69e7d186ac029f"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "telefone",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0054",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "716780a9b2b8e6395dfb093deb882c89828ef5ef0c22ac809f92906d209f478f"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "email",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0055",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "1b2a05e7c872ff125e3723f0bb1cb4e80dc706e845f5fb5f80b53967f5ed7c53"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj"
+        ]
+      },
+      "caso_id": "pii-0056",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "37f2d4404d1298cd496def2dec7c011f6cf6603178c108ef598fc291387cf5df"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf",
+          "pis",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0057",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "a327ab9bdba69371b2e5026375e5e8c18cc3bcfdd12b8464e429345ae907c419"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0058",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "ce500bb9de469372c246cee610a5e738c980c702efb399948a4fdd4f887c535b"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0059",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "e804bb8b85970f075ff2d10712b272f38232b73872a131504680df7911bb2fef"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 3,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0060",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "f9f1091e2c70021b2604fc1d6006c90c3bba451217c97b3cea4a653b2e262639"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0061",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "7d91d3af800afec0d7447ffe94d79dafd9f6db8659ce497f5cfba29e7d210a36"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0062",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "09873cc97adf7725caf7aaf80594812af4fd47a0ca4955d910e8d30f4106b4f7"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "cpf",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0063",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "86bf45bf8422743d962dfea5ece6db1634942d074c02675820f6d8744bae0b05"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0064",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "ac324d1612ec3145ee8b326f5c868f8ffb8b9630f81b42ed15eaa7b842e6f969"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "email"
+        ]
+      },
+      "caso_id": "pii-0065",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "c6b5fc69caeef1c2d14fb555d1d3f8cb15fd9ec65a903fc17289d63320661275"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0066",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "2807a7c7935b669c21a68a0e9e8dfe1624c85c060fc679d268606b7a87517117"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0067",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "b864e4e1a007f9af45b3b27434619d01360c73cef0d9c15c8377f28110965fac"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0068",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "1fc08eaa52769a21409e4680c3bb5e373659b19a3174fa7caf2afb98e86ec76d"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "pis",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0069",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "8d6eb9f7d4c10d3489a4d90ac311212fab151a7b306f51f87a0a06ca28366da8"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0070",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "55907a6e497924c6dd5f07940f61b6c2e73ff3de51542528ce5ffb6f00a913fd"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "email",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0071",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "6b303d3aa1ea5cc12b17f35372ffaf0e7205e3a0f4e6ef983820a9bac07bbe67"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0072",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "fc5a9ec7574e3a4b9ec903d4a5971015363fdf9ef2b2b462eb0be61b91e30650"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0073",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "b82d5a0c5228028ea85f7d7badda915ef428e68ec05dcd76c7e1932ea62fcc61"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0074",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "e60f92ddf5dfb3bc088807d3be7c4b537fad223a61ff0fbea4f998abeac8c83d"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "email",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0075",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "4228bab2f175c28c21eaa95b6a7b0f28a19522db82633b095d124de81d74cb6f"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "pis",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0076",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "84ff870f6d8674334ca1fb31a996749458546620712e5e0929f8383d4370980f"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0077",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "39254bc138a81a09d34a1449b8a821dd75bdfad804a88762efd0ddf5ce268b95"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0078",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "1e682a8536340bd70dbb61f87235443f618017b1fb2dfc8d26b867a25c12df52"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0079",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "a06cc5247abeba0c1fcbf747834a20e0e07d267053696259e4a76c011a4acaf0"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0080",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "0dd40386ee654061c03b937b5bd4b4b100dca8fe02526e2bbce849d5379ee223"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "pis",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0081",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "2e1b4215383a2479f059bbdfd6f217b4d20141a08a8b9db6e11189ff4423bda2"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0082",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "efc3e47546a05064de6c6326ed65218c6a32d63867affb247a062c34595afee1"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cpf",
+          "pis",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0083",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "bdc99d585c2c22a4ada2ef2ba5100c015a347b5691fae5736e6cd69be93050b2"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0084",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "8db4714a43f6e872579d39a95149abb9dcb13a574dedd99fb8fb24eeea4c0c3b"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cpf",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0085",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "2579491a00e5cdeef3b095c71c6dfbd4fc2642c0acc57b62837991fbb00b7270"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0086",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "df837cca20add58bafd165b7caa9e47668106e7f7821713925baea53a7e61468"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0087",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "467a6893c90929460e028dfdd9957f409f438f9ed4a048002ec3ddf819b8d394"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0088",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "3710253c51da5adf8ff2dc41887abb1a053847839389b58446778b6b61ce2524"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "cns",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0089",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "8a31793846cd6a5fafb28ec52245c7cc207e5e490660d560ae714e6255d37406"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cpf",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0090",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "722fab7c2f7ece4f57c7c585b5594e2888f881f3de1b001b5ed8bfa2a72e0a3f"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "pis",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0091",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "adbeed242336c5afcf62769a26a1f858b237e295c96e58046567d8b757931adf"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0092",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "36772dc0e674391fac4db5792a0249d2c8d0d767c8d471f0ae0b9ae2833f52f5"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0093",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "e1ba94e3f5507224f8c28a1d558c04f3196ad3ab1d78af9293282bf0c4781c5b"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0094",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "ae18aeb45a546d4e34477a077ab10d400ce641353a7901bf6895cbea1ae96fa0"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "email",
+          "pis",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0095",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "e13e2a547808979deb154969a22f1439013768ec3cb4557cabca5da7cab5ead9"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0096",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "55eedaea93745bd7bb4316aa0dd13cfa8eadc3fd7ce1683920edc33790181732"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0097",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "40c48202b8b5c56e77e1b0c2be2478077d37bd8526d0b0f16606184f09fe6fc3"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0098",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "557fa21b4b3495045070a7e26a5fefe95123eea9c1ff743ce9e51c9db55bbb4d"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj"
+        ]
+      },
+      "caso_id": "pii-0099",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "882949d35e3d31f6d4785e15a824e28e65b87de4adf2692843b0f8af1d81ef0c"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0100",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "2c71b8f433328d9481b7966ca8547174472d14f6dd14f4eb65b88d0478ea8d93"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "telefone",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0101",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "988b0dd8444d5c1b864fdcf886ab858896636dd78d5be7b340da21b578548dfe"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0102",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "6305c9cb02315a7d7a3a3dc8ac62c4f26be5219b9b15a63d5111829964be9402"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "cpf",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0103",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "d122092f6ea2fafb8b6a0cd58b816a08a6e05da03a95a0ad25af82fcd6c02d58"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0104",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "59065cabd5e44814ac979f7c9c6f906e6aa3ce11604eafac12f1d7ef95cd5c43"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "email"
+        ]
+      },
+      "caso_id": "pii-0105",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "0441bf6284e44795ce201150a36a79a8f42aecffcad7ff0ad08b7885c3ca666f"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0106",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "c01f950177fcee82bfd48b61c5e92b64be17a5ffbfff060db3d26fe28e8b38a1"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "email",
+          "pis",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0107",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "8632db70183383c0ca4e0e3c9163cf96cadefa30c8fad176574ed90c67431913"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj"
+        ]
+      },
+      "caso_id": "pii-0108",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "7a265ca5b511039bf481430a173a31ba1c76c96ab307bc6e704db13d2a5f39a6"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "email"
+        ]
+      },
+      "caso_id": "pii-0109",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "d2f3bc59767baa88fcc09c23096cfa2e1ba9e67b09eaa36e28701fbb00ede700"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 3,
+        "tipos": [
+          "cns",
+          "cpf",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0110",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "4545e900791e12001f0b8517089c9ed440f9e52c09377cf310ccdb168cf6ffd9"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "telefone",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0111",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "7299ed0348639d804ea4663dd8317d304c7c0eb94dbd338adbfd223af75420ce"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0112",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "da431b2d01013e79bc7c84c95337609b549d21db96c19e7bcd1260d44e629c97"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0113",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "dbb2599b99154f5b2a8abfc64efc5984157fb9b83ba5528fd7d6c38d83e7bcb5"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj"
+        ]
+      },
+      "caso_id": "pii-0114",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "88aa954cebad3e5ccc30b6d2782c1ff756e8494bc7f7cb04361cfaa1a4a1a737"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0115",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "afb6cf76db9d01e4303fdcbde7d8492ddf25acb71c507aac78d95850fe18a973"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "pis",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0116",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "af56f827e5160f6eb2caa2c641602d392b9e5c0e49f6dd3821a0b7289baee2fa"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0117",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "d5828eb516af5e238a21af3d53893696e04c0fd8ad672ea46f15dceaddf31083"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "email",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0118",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "61bf006748a8cf9627abb2790b6fb8103ac048a75610a4a37cfeb42a5907aca5"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0119",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "d109bce3d17df506fbe8dec2b66853a85ebdc4cc12ff952beec9d2278da506b5"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "telefone",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0120",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "4666fe770377811eb3b5613b2ff80eda32d87b410f90c5adb3afb8a5ad00a93d"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "email",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0121",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "4a912c382e0ccfe4814ff380efc191210053226371dc6be8381fd668145dd66e"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 3,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj",
+          "cns",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0122",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "91d7837b2d3d56d54ce0aa5e0ec3111c00d62fcda8f7facc1de165e4c1495ccc"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0123",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "1821a709cfab4aaf70ab76b7641563fcb1d94e3acd1af0e7c8a25c0451b1d96b"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0124",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "17b3478a113e682ba233c80357de8a503b699583ef98f09a224ae08aa7c3c404"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0125",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "3469474ad2634816599e82a7699ba8beadb9534dd9a473b7e8f8644659e4b40e"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0126",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "b0012561e40149465e16c63ac7bc886260c3c8279ed81a0dbcda47f385937cfe"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 3,
+        "tipos": [
+          "cpf",
+          "pis",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0127",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "af548411a6b91ea0403549bd8d009ae6ffdfa92faf8567f6fe1796d15a12902a"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 3,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj",
+          "cpf",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0128",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "314756ba73af86b2fb8e254682c68ce8c54f8a1a880d5835fe59cd992797767e"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0129",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "11a00155a3a03ea8b7f0fff6359c3b7514c988d947a7d06609955711adf0cd31"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0130",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "c681d142da49817177d120102c9076f3f16bf572da88e197aa5b0cd0d9d103e3"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "cns",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0131",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "0431a6e6d721974e7eb816839c0e5bf5bdcb30e73c87f892f0affa15b050aa26"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cpf",
+          "email",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0132",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "283b8f04a0ea3379062f9e3a9872c41072505de979a6f968164849a737a8fb56"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0133",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "ec8906ab14fd24f032c6a955f1b00940fa02a385e8cace907a92d354ab4da54a"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "telefone",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0134",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "3da7e347de87bcdf7d6e84516de8b5f7257bd4577a05625d612b7f116080b136"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0135",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "261674f4c1081518137743d602cef4008595ed0f6608c04544ae79e6bb7c725e"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 3,
+        "tipos": [
+          "cns",
+          "cpf",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0136",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "a69bfc196664186dc32eaf1d38fa3527da29e65527579b83f22fc1f320700a85"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0137",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "b68361ec11cb6dcb37e5374e0cc5d0e8ec88a2487f7ac3b4ce51319b560f0f6b"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0138",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "7f760348dbfb325294be9fb37b75d87a3aec397e2559d7288cab9893f3877613"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "email",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0139",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "8283506538828f8be6a07fa47f3d066d4cbb15155012695b11d901aca1462502"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0140",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "f2c6feebb40efaec588f4d9547f4342f000be865e201e04b3f7a0d62417e93ba"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0141",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "b16ca07cbebac8ec68ee70f41621358ce28553d3e7575d691bd62cf8c45045fe"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0142",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "1b02d578548aeed86e445a41be7092ac5a916d5b189712023f07d4a955265955"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0143",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "0f0aaaa4b41e8291ba60ceb0978360f5546b36e3169d53fa11538954e87874f3"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cpf",
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0144",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "2054900903ab6bf5a60c636673bba5e618276b1b3b689bd74782d55720d48b07"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0145",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "88e5eb0b9cce747493eb64626fde2d31b4927a407d1a6358fdc8c4085844173f"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "pis",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0146",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "ca71f75c79651a8f2771bce98827192919766864a2eed1d84a8df9fdacbedbc3"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0147",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "a2707c23edfd2c928959b225e02f49302e678bd982b06988371bdf8060e4b162"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cpf",
+          "pis",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0148",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "fc3bb4c82451fd42f17b4fbb1cce0b3931477b0223a20613911bf48d50d6040f"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0149",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "7b7bf61159aa52eb77bfd90b42e80f9283422e7ec44e2431e4d2f9b902378506"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "email",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0150",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "3a913a99bdebe6078b8a9ef699344a45b42fb7ba9be3630295eea0ad24ea789b"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "email"
+        ]
+      },
+      "caso_id": "pii-0151",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "af9c23e0d1e269f20ee2a10211b7b7d7758f09ae759541c13ccaa086e1fd7425"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0152",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "c3fdcc47b5c7d56d1605ea07978d0ccaa4df6d5c6a296d8276f9422854fab735"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns",
+          "cpf",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0153",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "feb578d715264634fd3afd0298ec956cd0f2d3fe61bcb9b05182fb277468de54"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0154",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "b7e81328bef28d9ca9bb3f07f0dc680119b9a064513f708700c8d34eb7667046"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0155",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "a983e2d57a654ca21b20eefbfd1d0fa4c864e67489ab39c2c1d1bf403ed10349"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj"
+        ]
+      },
+      "caso_id": "pii-0156",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "75559d1c8c49bf29eb71eac9b7be43c13f9cb95ea297d8f0ef596e46d96468e6"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "pis",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0157",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "3bd95673f80840dcbcd5da839030c2cf9002d4a94635d3429ccb7647f78cf403"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf",
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0158",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "74261dda773182801df7b28665d55ef3bc84685b1ef0f5ec747c42c51c42c906"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj"
+        ]
+      },
+      "caso_id": "pii-0159",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "e9ea5acdebbff7d4663619eddb96f430c35a427daf9daa155dd3d5196dcfd0d7"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "email"
+        ]
+      },
+      "caso_id": "pii-0160",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "23c94fdb4d4658619329a6440bbc89fe6c225d090ab4c44d68f94cf749cc9d26"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0161",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "31a065198dfc7746c50251253cd3ef88f41f7009f0780976b73d097fc484875a"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0162",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "ccd2be9f6ebaa19374a4a2b73df3a5b101bbe4c515a1fd0f36efca7bd11670cd"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0163",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "8dd54ed8645606f10c0acf5777d44f6aef65ae6271aee9554022932e65b6ba84"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "email"
+        ]
+      },
+      "caso_id": "pii-0164",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "c735cc678dd7e582757682a14ceb317fbf68ddc27af0479df29a6c88ca9d2825"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj"
+        ]
+      },
+      "caso_id": "pii-0165",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "eb389fe9fd6fb70cbbcbf729b52962806c2fa2d253e1c73cbc7353ff2eac75f7"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0166",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "71d3ca7f2aa5b9982d7d697a56b5010fdb05319812ce6bb194f97a159982372a"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0167",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "57d4b12d0cba099e130bd5eb0706089b71c14e7f2ebe5ba204979a7391cfcbfd"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf",
+          "email",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0168",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "393a1c9ebb8218ba0b0131e3bad92c65a9a4f3ac30ac743412f305d9a835ddde"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 3,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj",
+          "cpf",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0169",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "4ee5490b5b942976e95e43df64cad76d570d544b7306beff61cd7d16960c9e5f"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "email",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0170",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "aff7129cfc0f7a176c871a27a7faedce07f582722b99bc77a6a676119808964d"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "email",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0171",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "1c9327b2e04d6f4392ec61b1462dcb0bf92780299a4d81b56303561829590f43"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 3,
+        "tipos": [
+          "cnpj",
+          "telefone",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0172",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "3d9f2eba3548748e113cc5cd8cdcde0fd60c352b066fae32823baa6eadad976e"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cpf",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0173",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "4e64a43a651d088017bc48d1d44bdcdf3e43b0ab1d2ab70c6d9fcfa5b1d88e2b"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj"
+        ]
+      },
+      "caso_id": "pii-0174",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "d9d106f6f1a6f8897a6705a79c8d15bef95671782450063a21d9ed366b93f91a"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 3,
+        "tipos": [
+          "cnpj",
+          "cpf",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0175",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "1527d48bf59a15a275b205b08ac27f4ecb66c15a423b983297db2c0234ff739d"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "email"
+        ]
+      },
+      "caso_id": "pii-0176",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "15b8f386934528603655626969eafdc1bdbb097d114bf62a05ca682503826944"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "email"
+        ]
+      },
+      "caso_id": "pii-0177",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "da01956448ef3dc8e1830f447fd801d4fb8a6d49f46a617bae6781f203969170"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0178",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "7401a51ca8962a46e8f2a1ab7d15e3bcc17d11d637b9d60cae1a2b9acbb18b29"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cpf",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0179",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "705caa6c57ff77d9466e0113b8476d5d56e5b4fe3f374e55d76059bf793d0e6d"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "pis",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0180",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "b6364fb5cabc9e299eaeb589e3bb18faa0c635c47474f486f96f1a8861a42f27"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "pis",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0181",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "48d9d6ef6dab2da9e3be74a106081437bcc84cab93b6040878a2a4a5c8f8ff5c"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "email",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0182",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "184e7108e8933005c5b28cec165895f22a34edcdad238dd5ff5878c2efa6cdb8"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0183",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "e17eae6b7f8ae5e4f09d63c2b639c9d4c4c6590cd99d8439330b201a57d29809"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0184",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "73484d09f9e5fa4fdcf3dc73ddd4b289144b3c96eaeada3a9d1eb8af40857bb7"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0185",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "cfb053f9d5840c2d3c2a35eb537baff7468bb824d4b560e775bd2800e6b51424"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0186",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "e8ce05a711c2b73b19c0d3013cfb45c90b10054c1e18658ef336bc55e2810af4"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0187",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "075d48c5a03f943a1158a2d5bc34d447751972b194993fc866726cbe17cd348b"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "cpf",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0188",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "fe787d41aaa75cb1df697200a3669ed2d67a156f41769b69dde1dc7b76ad7c99"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0189",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "ea682c3cf2d0a021205d89bdebfd867ce31ef78fa9f32f41296feb6d2f43905c"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0190",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "f58c4c44143fbc685705b5676a0928bba06a04e487c6daabc26719555748acf2"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0191",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "232903cb7a3998628f8187593339474d759dd276152e87bbb93fff3cc7d4d9a8"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "email"
+        ]
+      },
+      "caso_id": "pii-0192",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "a49d9baffc56abc4e9e110cdd64c3f2dfa70660a46c63689e60affe48ac97c6a"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0193",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "a05317f55812a683279204acd699a61e782971db53c4a25189e4e5ac21491c98"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "email",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0194",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "c4497c727708dd5c91d67250e04ff619cf6d328f2d87d7c5631b00629c6a600b"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0195",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "4dd26288c2e27e963ccd9565d47a04a06f66313d7a17ff5dc7fa4c5cd402f095"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0196",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "4d87087ac60fc5755d88918b5db96ce12faeeba6ac93422aac387bcc86119d41"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns",
+          "email",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0197",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "466b1530166bf4fedfaf617ea8e875518add527b007bc1a3d6ee778674703611"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0198",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "31b6bd29719e8e61b377132ba6968597e5e876c791984ec34f7099bd3802d909"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 3,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns",
+          "email",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0199",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "ca31f529d38e118691e1c2d03f8ac16c48bd076327674ec51b47810d3fc371b9"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "cpf",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0200",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "504ca3213732297d07c94b71d214b776218e8f7fe0d1d9f240c71c413b2244a0"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0201",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "baed038733d28ea3986e423f8d16538fcb64dbd12dff470cf9cc8a4bfed2a514"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0202",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "371b45b52ed329b9b017272586e1d71f55c0d5e2c8bcf770872883ee2b4da905"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0203",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "3739bb063b9a5c4ce7bf284d322c91344a9a2009759dd6423b29d3fee247bb21"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0204",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "0048e8f261f5acf1990ba85b43d2cab9a6d5bac185ea1ceea9579b9edebaf90e"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "email"
+        ]
+      },
+      "caso_id": "pii-0205",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "6998cee5f80fa1091aa4ae02c10d3398c45f11cba96f416a8a6e1193751a2acf"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0206",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "7ae2b98f8c49399b9c16295bd3a1430fe8516f914c68eb66201184a7bffbfe9e"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "pis",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0207",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "d9c031b6e881f0691ac9200babe75f098eab330ac55df0208f4775fe24121fa5"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0208",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "2a524ab29615a278878d3d8704b93b2d6531468ef87376a25ffef548c300251e"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0209",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "20181f9785a7dbd674d400c7d247840a1a50a754f632aaae30a6d81e3e3539a2"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "pis",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0210",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "dc01a8ee46e4b460f03db5e7f4e707ea55beec1353a9df0e9381768164ac28d6"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "telefone",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0211",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "16f130d7db481046dfb5b178e0578d3f4fc644d2837bead4c01de68716004f97"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0212",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "d86f627f407e7031e9ac6eae6dd7b9118f67b1df6020ae5c70e76b7573a134dd"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0213",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "1cab03c7b784470fb807ae96e6cf9a166c653246cf024d06cfb81d050f0b668a"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0214",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "1f238576ecca64a13f1b8216560915d0cd3bb348017e2db5681ebcace914d3a1"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj"
+        ]
+      },
+      "caso_id": "pii-0215",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "4919d4962706a3cef9409e2757cbe6d925fec2f9b7b4d4f040804867026d6cd6"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj"
+        ]
+      },
+      "caso_id": "pii-0216",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "f7bace64903a55a9d73d252cdf5cef3b030a61a9bc6acb7bb8fdddf64ac6bb97"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj"
+        ]
+      },
+      "caso_id": "pii-0217",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "07aeaed4fe7bda0ccea30b84a2b7bc4ac17722557c5dacdfb39d13f5107ddbf6"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 3,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0218",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "781408a298143429511e1fa916558bede14290ce9d9c1681f280b04c08855107"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "email"
+        ]
+      },
+      "caso_id": "pii-0219",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "1515f95ea639a96b08797be97f06ccec0634dccb4792e08cdae82dcaf69ff778"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "email",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0220",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "1096e4d8e23518b1618f48cac6314da9600de59fb66c09ae357fc3a0950da730"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0221",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "c009d95778e837721ad969c27321c2b7ff3d36a318261876a9dffc0bc7c43281"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 3,
+        "tipos": [
+          "cns",
+          "email",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0222",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "1ccbc514492e7216e35b2eb0b7535f3aa1acec955261c4c1ca30a9cd66296d77"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0223",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "eb669a5462397d929cd969bfed23a871b4ca9d51899096a85749e94fb604d3e3"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0224",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "08deb89302397b3d1e315d32d1f1cc8dac9e35ada6d8adfcb066230aa70e9032"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0225",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "32520a0627a4b73d55bfcb77c6a9d9f41b05633802cc023f2a1ba4da7ec812db"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "pis",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0226",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "0fff158d5f74bb93525644ebe6866fd07c3c304359a90dc94d94d1dc145d8850"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0227",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "7b4842c757a27d1c70097c0eab0ce01dd1e8233350ba42c1f536d95ad3d2e78c"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0228",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "f6347ba5db185d970de1bd96b023a2351d94712bd928f189e862ddfc7d99f3ff"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0229",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "5ff67d512c87731835ec6220d8cd8d8f515b70073cb7c52663893ea8fa59c258"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0230",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "12f264aec3b9872e2325f8895ca82ddc01886cb310aa2549d5673ce74304f8fb"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0231",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "53c842849beca4ef4e10f98d3fefbb18013fbff3b0f090b912ceaef5911ae7d5"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "email"
+        ]
+      },
+      "caso_id": "pii-0232",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "0d3e1dd4166f2642908b29025a4b0d0d7dcf7b637490f5a3db91ee9b3b44ff38"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "cpf",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0233",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "24dedf42c33b84f00a1dba68d12cad0a2d9136aff56be131277b655ef8722d38"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0234",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "9258f7964da2dae2033e5cb0062d57eb35076aa8953fde4c8abc06ec804e70ec"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0235",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "998bdb5a63dd0a8c384d07f41930204e5b780009328a30349fd636effb56e8cc"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj"
+        ]
+      },
+      "caso_id": "pii-0236",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "738b6b8aebf4f2f7f11850355be5c3bbaef3882cec8681d5e31f595184234833"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "pis",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0237",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "c55cb9bfbe587901a60ea6ece43aab6273d1c726fa40b918c5aa96327f86f19e"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "telefone",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0238",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "3295cc22dde8c97f6d65c79335bd3e57ada42ab97549ce428527fe4cfaad90da"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 3,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cpf",
+          "email",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0239",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "99e03669159c8a88b6a44eea436078639d9c9a1bf027d24424598756cb269bf3"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 3,
+        "tipos": [
+          "email",
+          "pis",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0240",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "aee55bb2e5beedfbd85a8c4bd0a95e01eeb35bee939e60c79b44a18d6186f77e"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0241",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "2b8a12efba98633c77a5fa13781461515d33ac0c2a0b11d6e98f0e0198be5b8d"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "cpf",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0242",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "bdc3e1160ebe2e397ca55398cec7839708debf94eb66616f0755eec8e9ca148e"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns",
+          "telefone",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0243",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "5d9224af28e8f622ef2409d27f130b5a423af62d3d7ec1fd3996ac32bf7540f9"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0244",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "d099db65c743a336a6949cf172b074e07b4070ea4bad49a23bb086bf12f2d6ce"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0245",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "4c318780a9514e097e0f82ffa8472b3d6ba86367b4723a0d945d1db96db34528"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0246",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "86695fcbbf6b25357b56d0a7c70b1674a86f763060e09a5366ddeb2a59982e80"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0247",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "18d713e9c339156c1f840ae04ead27920eb2f5773afa2100754f17cb82c13fbe"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf",
+          "email",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0248",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "0fde89ec1abd94217965e1185767a12b4e1a9ad6ba83eb2b29d49f978f89a858"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0249",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "9162ab8ad6e780fabc903bbfee51e3fa4149c81e924865ec00a24dedb41815fa"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0250",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "afba5f09708dd18cf3ec1610b405fd13833d0018b6d5888e4fe3321b20cf1648"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0251",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "d8378dd4c50c03cf86108955d044dff7996d5076a4d716c75d026d0b2590ab11"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0252",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "a7605abea87f22f8a2362bc2b97459ead6b5f6cd356ded2aa5a3ed70a67e6ed1"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0253",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "bd8fd8cadba740efe3d1d1448bfe38835c077c3fc4e5cfd921b6b8f2a13b0e99"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0254",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "03ffd352bdb51238ff972c5adfdb3ecee531ce31f27755c8d84e2222d79c5645"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0255",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "a4a71f596ba2a670b5ffec8a4abf74c0255713d646071db2100e3eb32a31353e"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "cns",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0256",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "9ff5cee7b29924dc89670a2ce43975ac0ed595fad37a026c65c8faf0aac2dd71"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0257",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "a327dd143678fa51bc377bd54ba60141fd99a9903cf9d4b13b52fc88cfc8fad9"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0258",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "33ad7e2d8062c654623831fe0384a4e0553f17920f8fa44bb4ebe11aa8e6e6fc"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0259",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "25578fbceb26a285a25f51736cd54bfeed105e73af858853f79923800e47ad11"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0260",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "288081b0f90917fdbc400457c85b0d58cbe888eebf3d03246abf328c28ac28ae"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0261",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "1a2fad8ce5357ecadd45c726be6d53b8e51c1110e981826b383096317d8a8277"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0262",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "9fa4ec4d281e19447bbe5165a74497f7ff7be328762d8e90fb7cb67660eedbbe"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0263",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "66d79ae033ff42d75c7994156625d433d73e60c925f358873449cd7e43cf7272"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0264",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "a84fdaab193652c1e4ff6ebf358102ac05a8c9b0400e79ff9e8cde98c46454e4"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0265",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "74b8ec6ee408d3c574f2b5d7697df85e746d5d1850da5fc9ad2f5af4ad424cea"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0266",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "6eb0312d1190b491e5ec1a7ce092bf839d04bcfab169370486cc8cc736d77d74"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "email"
+        ]
+      },
+      "caso_id": "pii-0267",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "0bab5947dfa228dd704c6ae6e3c1482fe5c2351b55740c59642a960d095a45cc"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0268",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "957bfd7b2f28d415d3cade45b6133cb4905871af08105412f0ce2b9151f9e89f"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0269",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "5e028ab390d0f0b3527531ce89f3150e17eb96c772ca21728e95d8b05d9bdf2a"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0270",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "c99b6af61040762d15d5e834b9fb714a6cedf8b64c078c9d40a79eb74ac7904a"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0271",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "fcd8ede44fe873a4206f2e7a0acd3d78ab064a75bce1a5207827f701cfe5f658"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "email",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0272",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "ff6064c2f84718baa5c3346233bcec558e83a9812dc00f587df3b8b06b2c56c8"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0273",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "8bafd96fc924f4f4852f3225fd31cc180c67710ff01eb6e60e47b2ec4caa9dab"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0274",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "b5539bca84ab72d4a5e4e5247d406b74f4eb42630504c1fe80d49c272ed1e9d5"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0275",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "aaf47a53101314f8e5ffc1dd147b661974ccd9242a21b6dd4a64b86c96670a4b"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 3,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0276",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "c2225ad317c76ac12fb5c8a4fa0f10e40c7825098f7ebb7b6c248511bef24eb6"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 3,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns",
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0277",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "db6e5788aa63d10c34d7b3cb8729d64adb409e6d77a2a57b770215625f0467a7"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0278",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "4308dc54304a04aadbbc5a16c2502f24b7823a4a6764409a61824496746f8956"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0279",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "7fc9c2868283f1a842eb5dac64de67410d06cb6a02913ea5edb4e32041b7232c"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "pis",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0280",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "8cf84c0b35349afa1583a37a40f9d59a0b086bcd9df7865c61b2343012eddcc3"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0281",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "d0dd3a9e15c3573a4ded7c1f6a21a8a4b003a86eeb5b1cdf61c6946e6886aaef"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "pis",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0282",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "6c6e6a4560617440cb604bf1292b3441cec27fa7c545f6c1c2205d49a23ba0f8"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0283",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "b6cec10019e64a92c8e58aef7bd6680b9e85d8334a4cfbd6087781924136ccc1"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0284",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "8e384b40a9cde8aabcc93fe41aa629397ad012587929f084a565cd98bf0da612"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "telefone",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0285",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "e78d168e1210d1dffcde758e8c78ffcc44999d142b5175bcbd9999219f32f372"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0286",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "981e8d24a97a03d285e3d63a7e28249b62576f39de108790695016589dc1aac0"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "email",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0287",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "8a24d40108717b9d8cae5c421d4c799a63aaeb24dc63b9e6e2897c7a03525ae4"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0288",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "93721da54f2362fd20a2ca3122c2738b916c31f79d81c0bde65be856cf9addb4"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "email",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0289",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "ce3c72f2abed9e0780a66235f9e8fc8cb7507733c18a446758ea469568820b08"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cpf",
+          "email",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0290",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "787fc7a6125164801c8435ca48adfae06f8390c7d11bd0a99e4e26c17b6e2d7b"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0291",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "78022c6673d1bf0874685458f6ab2b7c269803f24f79e8eb92547a1b2356dd5c"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0292",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "bd966eedee5cae0f42f1c5dc854daa80018f87d9745ab490fe8843e03e326510"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0293",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "f6b0e390af23481de0b727918d249402d9558c793c70787e6026106aec7b91a2"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0294",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "040edf44068ca6caa04a71b1cf9fa36271dbed5a6f892de27ce08acb8f144530"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns",
+          "cpf",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0295",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "88c7e0088686b1df153c069cbadc9a7fe3500088006172edc6842d63fc5290bd"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0296",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "d384c3df0301209acf47bf7eda2de360a7322bb3ee117f9b6096597082fe46e1"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 3,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj",
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0297",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "40eb401cd08eba0ca6195c324949479bfa4426a54fac16f3033c03b375250047"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cpf",
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0298",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "f9a0af707c2ae8469127bbafddfea4ca18df467d3f96ca3bc51b85fe5a253311"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0299",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "46d9a7716fc0135fbad1f26f9764954b29795160e9af94616760d2c7915c01bb"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0300",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "91e14dabfd2569b0efe94d26e85ab4e0eacc170280f47c1ee89e0d7734e91bec"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0301",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "23fef71b65c153061b73e3a86a7f439af7890012755d70a70b909115d0968616"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0302",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "bc21225700711b3dab650f6727488fd62221c2e7bc706b05a05ba76924fe9f0e"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0303",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "8f7ccbcac831e5b84356c282d015a39ee66cedce4e05a41da10e0b95e450dbbf"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0304",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "fc559c3f7ccac30bd000c3ce78163efae83be88ac18b0df20a268f352864e523"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0305",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "3621f50474e9bc3cb6abbd121175cbace81d7985adb1a811b4253ee57f84e00d"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0306",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "7718e18783f74f8fee7f4bc6a571aaee8f531d0c0e650d18f9d7e97fc0328022"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0307",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "3704b2e14c999f987730dad3ca44683417a5ca2f1fc215d60b67b19a07a38abe"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cpf",
+          "email",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0308",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "1b389d604c3b2302781c4bf23b03522543a859f26863dff48e86969d4c5df9b2"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 3,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns",
+          "cpf",
+          "email"
+        ]
+      },
+      "caso_id": "pii-0309",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "92ea4741d6f02cf2a05729c9952102adc53b17745cf3eb3492568540fd347339"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj",
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0310",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "57a90e9045c4332a4c312260e7280f21e1a8fc02d7e25e51658fec245ad3c4c3"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "email",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0311",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "6042b2eb78837d76a2acd653bd54212f8cd819ccdd8b998dbeff91c8353c11bf"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj"
+        ]
+      },
+      "caso_id": "pii-0312",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "0d0e15b0969af43b4360f56704db9ad80b3a5cca9307e48c6b8b587374e93bf5"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0313",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "aadcdb3fb6cf8b92740a1468647a4744906fd3f5bf6f09a0821e8a98db0998af"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "pis",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0314",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "45168cdf1b9b60c63db4a59d569cc55023bf81260f102670fbebaf9cee2701ce"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0315",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "ecef203086f0aa64018d290f9ba371e1f7b48268dc9e19135f5fc710b714efc8"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0316",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "4609e385047490405cd2e6cef4db264a217d68cedd3201149d2cd54a015af0d5"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cpf",
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0317",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "0e5d6b114e07529a21e025c117663c8a60cc6975e5a90371d357c8318084a5b0"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "pis",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0318",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "9478f3f50a317e90933a1367e29474775cc266a7c9007fbe174bf3803bf3d5b3"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0319",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "c3240e81623e082e675f2a2e9791dcb5e10fef70a6348f165726a0e6cde7f39f"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj"
+        ]
+      },
+      "caso_id": "pii-0320",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "ba5a12912d01ecc6b2f05f1b8ebb36bc431de3727c8cf7e9887b7f403d42419a"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0321",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "75809c15cbfe29dc84555cb215190af1429f23d4b6cffd6ff1291a2f4f01ee2f"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0322",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "7c4c3224082fc6a04d28b80e9dd9dd4d00d32d66f718a3eef97c9eada2c1815a"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0323",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "fba60097d9019b88b938d3a3b56100f76dd6d8c647a331db0c97aeadd434566e"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "cns",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0324",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "2a54f93467997e739322d114bc91999fb6252265cb1de1fbff2b79743f005f53"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0325",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "f9c341076abffd366c965383fb3e4d7e6d8661563cc19bbb77126b7a35f4c6f0"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0326",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "d076bc600b388fb4638a8aaaa94929d916e8cca6c8ea8afef5c0052ce671457a"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "telefone",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0327",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "441ebaba2cb9cbf5a0a55f01d6d3b2fd1ab09bf42ae77b8095091996dad15407"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0328",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "ee56eb1bd03158dd7f8e737073dccc0700b6195a5e5e503f48fe1d866f1be184"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0329",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "402ae18e21cee0401451d2dde38459628ecf21f935c9992ab54b18c4a84dcb38"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "email"
+        ]
+      },
+      "caso_id": "pii-0330",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "fcb088d13c3154401874394e2920dd9e2cd150a50871ae1921b64dc7279d4cb1"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0331",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "628568872cf8d2bf6a92e9b082c5760b430bfebbe84685e12951632d426516ed"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0332",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "1a9bf4ba1d8b9d04157d91208a5b0198051d8c3f8a4c9c25859fa101c95123b2"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0333",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "bdf047a916b5c64e13c466f20ccc44d2096591c2bcbc5281b270d1c686dec0c6"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0334",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "a4baf18f7027e9002a40479b9dddce37ad3a3fde8a5ff6e55a0d666a0d86bd29"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj"
+        ]
+      },
+      "caso_id": "pii-0335",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "4eb2cc56a956d1e6769208a96d2a8548eaf331ff2e8fad733de349a8cec1c5c7"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 3,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cnpj",
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0336",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "5bb6a15c7ae48eeb417d38096e75f615d37ceaa0276764ad2b5faa843b64b232"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cns",
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0337",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "807be70512fe3f5c023fcb2ba802c96f04ddad10f7a9cc47bff8d6549e6a7857"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0338",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "e758e006365fe05a2786e9f2fdfcd4911663a1f6d25eefb77853f7bd84f57eed"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "email",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0339",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "7491ea7a8140648f0bb50f3bc5a17ce341e377bef8f1e7f0b512f37422edfb56"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cns"
+        ]
+      },
+      "caso_id": "pii-0340",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "eee02972048ad915635283dfda4551c3eb6fdd14f4d1ee712db2160c1fa4aa49"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "cnpj",
+          "pis",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0341",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "3c779fcc8efd268e8f943c656d2ee9afeb8a557672489f4543a67d578abf52cf"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "email",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0342",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "db2528e5e71c4eab8f47bab8ae9ddca03ca3527af048fa9e7d74a270477cd12a"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0343",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "106ba274018dd6d32c087249feb0cdfd53a5f82a34fcd0b5c80dea088c756938"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 1,
+        "tipos": [
+          "cnpj",
+          "titulo"
+        ]
+      },
+      "caso_id": "pii-0344",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "6f17605544b46f1ed11f1bab3007bf23b4692c782f3058ba0c640f32ebaf8a8f"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 0,
+        "ocorrencias_positivas": 2,
+        "tipos": [
+          "email",
+          "pis"
+        ]
+      },
+      "caso_id": "pii-0345",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "d1696e52ac81157d800dd15b918aaa031c824617c6c0497d06a0c172d3a95128"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 2,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cns",
+          "telefone"
+        ]
+      },
+      "caso_id": "pii-0346",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "e67657d9f8a49c471b2856e16df23ddcf30452863979c6c067828f7741c8987b"
+    },
+    {
+      "atributos": {
+        "ocorrencias_negativas": 1,
+        "ocorrencias_positivas": 0,
+        "tipos": [
+          "cpf"
+        ]
+      },
+      "caso_id": "pii-0347",
+      "conjunto": "corpus-pii",
+      "grupo_primario": "PII",
+      "origem_rotulo": "propria",
+      "papel": "caso_de_risco",
+      "rotulo_origem": null,
+      "sha256_texto": "9473bee9e5b2f9b0c3a794cfdd203b5bb027c6975b2b7942889cc74e7a02a88d"
     }
   ],
   "textos_repetidos_no_mesmo_conjunto": 1

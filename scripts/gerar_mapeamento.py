@@ -149,8 +149,39 @@ def hackaprompt_ctx() -> list[dict]:
     ]
 
 
+CORPUS_PII = RAIZ / "conjunto_teste" / "pii" / "corpus.jsonl"
+
+
+def corpus_pii() -> list[dict]:
+    """Um registro por texto do corpus (unidade submetida a camada e ao Presidio). O
+    gabarito por ocorrencia fica no proprio corpus; aqui vao contagens."""
+    if not CORPUS_PII.exists():
+        return []
+    registros = []
+    with CORPUS_PII.open(encoding="utf-8") as arquivo:
+        for linha in arquivo:
+            t = json.loads(linha)
+            pol = collections.Counter(o["polaridade"] for o in t["ocorrencias"])
+            registros.append({
+                "caso_id": t["id"],
+                "conjunto": "corpus-pii",
+                "sha256_texto": sha256(t["texto"]),
+                "papel": "caso_de_risco",
+                "grupo_primario": "PII",
+                "origem_rotulo": "propria",
+                "rotulo_origem": None,
+                "atributos": {
+                    "ocorrencias_positivas": pol["positivo"],
+                    "ocorrencias_negativas": pol["negativo"],
+                    "tipos": sorted({o["tipo"] for o in t["ocorrencias"]}),
+                },
+            })
+    return registros
+
+
 def montar() -> dict:
-    registros = do_not_answer() + bipia() + hackaprompt_inj() + hackaprompt_ctx()
+    pii = corpus_pii()
+    registros = do_not_answer() + bipia() + hackaprompt_inj() + hackaprompt_ctx() + pii
     registros.sort(key=lambda r: r["caso_id"])
 
     ids = [r["caso_id"] for r in registros]
@@ -173,10 +204,9 @@ def montar() -> dict:
                 "mista": "rotulo de origem externo, com atributo de desenho proprio",
             },
         },
-        "pendentes": {
-            "corpus_documentos": "tarefa 3.6 (grupo PII, origem_rotulo propria)",
-            "mensagens_legitimas": "tarefa 3.8 (papel controle_legitimo, sem grupo)",
-        },
+        "pendentes": (
+            {} if pii else {"corpus_documentos": "tarefa 3.6 (grupo PII, origem_rotulo propria)"}
+        ) | {"mensagens_legitimas": "tarefa 3.8 (papel controle_legitimo, sem grupo)"},
         "textos_repetidos_no_mesmo_conjunto": len(repetidos),
         "registros": registros,
     }

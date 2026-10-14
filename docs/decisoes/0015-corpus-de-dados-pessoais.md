@@ -439,3 +439,43 @@ positivos.
 
 ## Data da revisao
 2026-10-14
+
+---
+
+## Resultado da geracao - 14/10/2026
+
+`python scripts/gerar_corpus_pii.py` na maquina do experimento, depois do commit
+`e5c2b3e` (gerador e testes); corpus commitado em `22d91f7`.
+
+| Item | Valor |
+|---|---|
+| Arquivo | `conjunto_teste/pii/corpus.jsonl` (LF, 347 linhas) |
+| Semente | 20260829 (`SEMENTE_MESTRA`) |
+| Textos | 347, com 1 a 3 ocorrencias cada |
+| Ocorrencias | 700: 350 positivas e 350 negativas |
+| sha256 | `ff21394b6b2e7c2f6ce3c0451a1ed77bac2e48becde145988e33be8ea30aa43e` |
+
+| Tipo | Positivos | Negativos por classe |
+|---|---:|---|
+| CPF | 50 | N1 10, N2 11, N3 10, N4 9, N5 10 |
+| CNPJ | 50 (25 numericos, 25 alfanumericos) | N1 10, N2 10, N3 10, N4 10, N5 10 (35 numericos, 15 alfanumericos) |
+| CNS | 50 | N1 10, N2 10, N3 10, N4 10, N5 10 |
+| PIS/NIT | 50 | N1 10, N2 11, N3 10, N4 9, N5 10 |
+| Titulo | 50 | N1 10, N2 11, N3 10, N4 9, N5 10 |
+| Telefone | 50 (celulares) | T1 25, T2 25 |
+| Endereco eletronico | 50 (dominios reservados) | E1 25, E2 25 |
+
+**Reprodutibilidade verificada:** o mesmo gerador, com a mesma semente, produz o mesmo
+sha256 no Python 3.13.2 da maquina do experimento e num Python 3.10.12 independente. A
+geracao nao depende da versao do interpretador entre essas duas.
+
+O corpus entra no mapeamento de rotulos (ADR-0018) com um registro por texto: grupo PII,
+`origem_rotulo = propria`, e as contagens de ocorrencias como atributo. O gabarito por
+ocorrencia fica no proprio corpus.
+
+**RQ-02:** a aceitacao ("gabarito versionado, com contagem declarada de positivos e de
+negativos dificeis por tipo") tem evidencia nesta secao e no arquivo. A mudanca de estado
+do requisito e feita no fechamento da etapa.
+
+## Data da revisao
+2026-10-14

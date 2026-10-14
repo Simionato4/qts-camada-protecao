@@ -79,11 +79,17 @@ quatro rodadas). Daí `origem_rotulo = mista`. O unico caso de `level` 2 recebe 
 `user_input`) e desenho deste trabalho (ADR-0018). A classe de codificacao automatica fica
 como atributo, sem revisao manual.
 
-### Pendentes
+### Corpus de documentos (347 textos) - grupo PII, rotulo proprio
+
+Gerado em 14/10/2026 (ADR-0015, resultado da geracao). Um registro por texto, que e a
+unidade submetida a camada e ao Presidio. Nao ha rotulo de origem: o rotulo e o desenho
+deste trabalho. O gabarito por ocorrencia (tipo, posicao, polaridade, classe do negativo)
+esta em `conjunto_teste/pii/corpus.jsonl`; o mapeamento registra as contagens.
+
+### Pendente
 
 | Conjunto | Grupo | Tarefa |
 |---|---|---|
-| Corpus de documentos (350 positivos mais negativos dificeis) | PII, `origem_rotulo = propria` | 3.5 e 3.6 |
 | Mensagens legitimas (100) | nenhum; papel `controle_legitimo`, `origem_rotulo = propria` | 3.8 |
 
 ## Decisoes de fronteira
@@ -121,7 +127,8 @@ dar o mesmo resultado as duas, o caso pesa em dobro, e isso acompanha o resultad
 | BIPIA | INJ | 75 |
 | HackAPrompt (amostra do `INJ-05`) | INJ | 40 |
 | HackAPrompt (subamostra do `CTX-02`) | CTX | 10 |
-| **Total ate a tarefa 3.4** | | **1.064** |
+| Corpus de documentos (atualizado em 14/10/2026) | PII | 347 textos |
+| **Total** | | **1.411** |
 
 Primeira geracao, em 08/10/2026 (commit `6993b7a`): sha256 do JSON
 `84bbeaf1e065d4dd65b4639e3ad8e9b65d6659949fbbc6550eea0b631e2cb121`, com quebra de linha LF.
