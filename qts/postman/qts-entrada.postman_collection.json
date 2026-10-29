@@ -1,0 +1,155 @@
+{
+  "info": {
+    "name": "QTS - camada de protecao - /entrada (Teste 2)",
+    "description": "Teste funcional de sistema do endpoint /entrada da camada (commit da7c66a), reaproveitavel como regressao. Responsaveis: Thiago Lanzarin e Rooch Vertus. A camada roda sozinha com uvicorn na porta 8010, sem modelo e sem n8n.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8010"
+    }
+  ],
+  "item": [
+    {
+      "name": "01 mensagem comum - encaminha sem alterar",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"ponto\": \"entrada\",\n  \"texto\": \"Qual o prazo de entrega do pedido 10482?\",\n  \"id_requisicao\": \"{{$guid}}\",\n  \"condicao\": \"A\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/entrada",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "entrada"
+          ]
+        },
+        "description": "Particao: texto comum."
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "// Esperado (ficha): 200, decisao = encaminhar, texto identico ao enviado, versao_regras presente.",
+              "const enviado = JSON.parse(pm.request.body.raw);",
+              "pm.test('status 200', () => pm.response.to.have.status(200));",
+              "const r = pm.response.json();",
+              "pm.test('decisao = encaminhar', () => pm.expect(r.decisao).to.eql('encaminhar'));",
+              "pm.test('texto identico ao enviado', () => pm.expect(r.texto).to.eql(enviado.texto));",
+              "pm.test('versao_regras presente', () => { pm.expect(r).to.have.property('versao_regras'); pm.expect(r.versao_regras).to.be.a('string').and.not.empty; });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "02 mensagem com CPF - encaminha sem alterar",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"ponto\": \"entrada\",\n  \"texto\": \"Meu CPF e 529.982.247-25 e quero cancelar a compra.\",\n  \"id_requisicao\": \"{{$guid}}\",\n  \"condicao\": \"A\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/entrada",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "entrada"
+          ]
+        },
+        "description": "Particao: texto com dado pessoal (CPF de teste). Na versao da7c66a ainda nao ha regra: o esperado e encaminhar sem mascarar."
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "// Esperado (ficha): 200, decisao = encaminhar, texto identico ao enviado, versao_regras presente.",
+              "const enviado = JSON.parse(pm.request.body.raw);",
+              "pm.test('status 200', () => pm.response.to.have.status(200));",
+              "const r = pm.response.json();",
+              "pm.test('decisao = encaminhar', () => pm.expect(r.decisao).to.eql('encaminhar'));",
+              "pm.test('texto identico ao enviado', () => pm.expect(r.texto).to.eql(enviado.texto));",
+              "pm.test('versao_regras presente', () => { pm.expect(r).to.have.property('versao_regras'); pm.expect(r.versao_regras).to.be.a('string').and.not.empty; });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "03 ponto invalido - 422",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"ponto\": \"inexistente\",\n  \"texto\": \"teste\",\n  \"id_requisicao\": \"{{$guid}}\",\n  \"condicao\": \"A\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/entrada",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "entrada"
+          ]
+        },
+        "description": "Particao invalida: campo ponto fora do contrato."
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "// Esperado (ficha): ponto fora de entrada|contexto|saida e recusado pela validacao do contrato.",
+              "pm.test('status 422', () => pm.response.to.have.status(422));",
+              "pm.test('erro aponta o campo ponto', () => { const d = pm.response.json().detail; pm.expect(d.some(e => e.loc.includes('ponto'))).to.be.true; });"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

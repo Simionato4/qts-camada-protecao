@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="QTS - camada de protecao - /entrada (Teste 2)" tests="3" time="0.082">
+  <testsuite name="01 mensagem comum - encaminha sem alterar" id="a15a78de-c7f6-40bc-90d3-b3a910c28bb8" timestamp="2026-10-29T23:40:12.509Z" tests="4" failures="0" errors="0" time="0.058">
+    <testcase name="status 200" time="0.058" classname="01MensagemComumEncaminhaSemAlterar"/>
+    <testcase name="decisao = encaminhar" time="0.058" classname="01MensagemComumEncaminhaSemAlterar"/>
+    <testcase name="texto identico ao enviado" time="0.058" classname="01MensagemComumEncaminhaSemAlterar"/>
+    <testcase name="versao_regras presente" time="0.058" classname="01MensagemComumEncaminhaSemAlterar"/>
+  </testsuite>
+  <testsuite name="02 mensagem com CPF - encaminha sem alterar" id="91d1bab5-455d-4a5f-b443-beb75e72233f" timestamp="2026-10-29T23:40:12.509Z" tests="4" failures="0" errors="0" time="0.018">
+    <testcase name="status 200" time="0.018" classname="02MensagemComCpfEncaminhaSemAlterar"/>
+    <testcase name="decisao = encaminhar" time="0.018" classname="02MensagemComCpfEncaminhaSemAlterar"/>
+    <testcase name="texto identico ao enviado" time="0.018" classname="02MensagemComCpfEncaminhaSemAlterar"/>
+    <testcase name="versao_regras presente" time="0.018" classname="02MensagemComCpfEncaminhaSemAlterar"/>
+  </testsuite>
+  <testsuite name="03 ponto invalido - 422" id="28cf345d-165f-4127-901f-076b4b65c4b7" timestamp="2026-10-29T23:40:12.509Z" tests="2" failures="0" errors="0" time="0.006">
+    <testcase name="status 422" time="0.006" classname="03PontoInvalido422"/>
+    <testcase name="erro aponta o campo ponto" time="0.006" classname="03PontoInvalido422"/>
+  </testsuite>
+</testsuites>

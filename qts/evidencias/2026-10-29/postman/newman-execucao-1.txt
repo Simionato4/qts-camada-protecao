@@ -1,0 +1,48 @@
+# Etapa 4 - Teste 2 (Newman), 2026-10-29T23:40:11Z, commit base da7c66a
+# Camada: uvicorn camada.app.main:app --port 8010, ARQUIVO_LOG=qts/evidencias/2026-10-29/postman/camada-qts.jsonl
+$ newman --version
+6.2.3
+$ newman run qts/postman/qts-entrada.postman_collection.json -r cli,json,junit --color off
+newman
+
+QTS - camada de protecao - /entrada (Teste 2)
+
+→ 01 mensagem comum - encaminha sem alterar
+  POST http://127.0.0.1:8010/entrada [200 OK, 320B, 58ms]
+  ✓  status 200
+  ✓  decisao = encaminhar
+  ✓  texto identico ao enviado
+  ✓  versao_regras presente
+
+→ 02 mensagem com CPF - encaminha sem alterar
+  POST http://127.0.0.1:8010/entrada [200 OK, 332B, 18ms]
+  ✓  status 200
+  ✓  decisao = encaminhar
+  ✓  texto identico ao enviado
+  ✓  versao_regras presente
+
+→ 03 ponto invalido - 422
+  POST http://127.0.0.1:8010/entrada [422 Unprocessable Entity, 337B, 6ms]
+  ✓  status 422
+  ✓  erro aponta o campo ponto
+
+┌─────────────────────────┬──────────────────┬──────────────────┐
+│                         │         executed │           failed │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│              iterations │                1 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│                requests │                3 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│            test-scripts │                3 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│      prerequest-scripts │                0 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│              assertions │               10 │                0 │
+├─────────────────────────┴──────────────────┴──────────────────┤
+│ total run duration: 226ms                                     │
+├───────────────────────────────────────────────────────────────┤
+│ total data received: 593B (approx)                            │
+├───────────────────────────────────────────────────────────────┤
+│ average response time: 27ms [min: 6ms, max: 58ms, s.d.: 22ms] │
+└───────────────────────────────────────────────────────────────┘
+exit code: 0
