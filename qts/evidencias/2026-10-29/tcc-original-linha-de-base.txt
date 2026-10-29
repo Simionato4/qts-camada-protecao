@@ -1,0 +1,14 @@
+# Linha de base do repositorio original do TCC (somente leitura), 2026-10-29T23:19:09Z
+# Comandos com GIT_OPTIONAL_LOCKS=0 para nao gravar no .git do TCC
+$ git rev-parse HEAD
+9bacb1890ceaf71edc20fdcf7113db12973e5e43
+$ git status --short
+ M conjunto_teste/legitimas/mensagens.txt
+ M conjunto_teste/selecao/mapeamento_rotulos.json
+ M docs/mapeamento-rotulos.md
+ M docs/protocolo.md
+ M scripts/gerar_mapeamento.py
+?? conjunto_teste/legitimas/mensagens.jsonl
+?? docs/decisoes/0023-mensagens-legitimas.md
+?? scripts/gerar_legitimas.py
+?? scripts/tests/test_gerar_legitimas.py

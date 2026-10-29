@@ -1,0 +1,54 @@
+# Qualidade (PDCA) do trabalho de QTS: roda os testes a cada push e pull request.
+# No TCC os testes so rodam quando alguem executa manualmente; aqui rodam sempre,
+# e o relatorio fica guardado como artefato da execucao.
+name: QTS - testes automatizados
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o codigo
+        uses: actions/checkout@v6
+
+      - name: Preparar Python 3.10 (mesma versao da execucao local)
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: "**/requirements*.txt"
+
+      - name: Instalar dependencias de teste do TCC
+        run: python -m pip install -r requirements-dev.txt
+
+      - name: Registrar ambiente
+        run: |
+          mkdir -p relatorio
+          { echo "commit: $GITHUB_SHA"; python --version; python -m pytest --version; pip freeze; } > relatorio/ambiente.txt 2>&1
+
+      # Suite do TCC sem os testes marcados "lento" (o pytest.ini ja aplica -m "not lento").
+      # Nenhum deles sobe Docker: o Qdrant roda em memoria.
+      - name: Testes do TCC (regressao)
+        run: >
+          python -m pytest camada/tests executor/tests recuperador/tests modelo/tests scripts/tests
+          -v -rs --junitxml=relatorio/tcc-junit.xml | tee relatorio/tcc-saida.txt;
+          exit ${PIPESTATUS[0]}
+
+      # Teste 1 do trabalho: valores limite e particionamento da guarda de orcamento.
+      - name: Testes QTS (guarda de orcamento)
+        if: always()
+        run: >
+          python -m pytest qts/testes
+          -v --junitxml=relatorio/qts-junit.xml | tee relatorio/qts-saida.txt;
+          exit ${PIPESTATUS[0]}
+
+      - name: Guardar relatorio como artefato
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: relatorio-testes-${{ github.run_number }}
+          path: relatorio/

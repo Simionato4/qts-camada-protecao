@@ -1,0 +1,62 @@
+# Etapa 2 - 1a execucao do Teste 1 (pytest), 2026-10-29T23:21:42Z, commit da7c66a
+$ python -m pytest qts/testes -v -p no:cacheprovider --junitxml=qts/evidencias/2026-10-29/etapa2-pytest-1a-execucao.xml
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.4, pluggy-1.7.0 -- /sessions/rcw-01dqvkggp1xmtxfjcfcpduyu/venvs/qts/bin/python
+rootdir: /sessions/rcw-01dqvkggp1xmtxfjcfcpduyu/mnt/QTS-trabalho-b2
+configfile: pytest.ini
+plugins: anyio-4.15.1
+collecting ... collected 13 items
+
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[limite_usd_no_teto_aceita] PASSED [  7%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[limite_usd_acima_do_teto_recusa] PASSED [ 15%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[limite_chamadas_abaixo_do_teto_aceita] PASSED [ 23%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[limite_chamadas_no_teto_recusa] PASSED [ 30%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[particao_dentro_dos_dois_tetos_aceita] PASSED [ 38%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[particao_usd_acima_do_teto_recusa] PASSED [ 46%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[particao_chamadas_acima_do_teto_recusa] PASSED [ 53%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[particao_teto_usd_informado_1_substitui_padrao_recusa] PASSED [ 61%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[particao_teto_chamadas_informado_10_substitui_padrao_recusa] PASSED [ 69%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[limite_teto_usd_informado_0_recusa] FAILED [ 76%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[limite_teto_chamadas_informado_0_recusa] FAILED [ 84%]
+qts/testes/test_guarda_orcamento_qts.py::test_soma_da_fronteira_e_exata_em_ponto_flutuante PASSED [ 92%]
+qts/testes/test_guarda_orcamento_qts.py::test_guarda_nao_grava_ao_verificar PASSED [100%]
+
+=================================== FAILURES ===================================
+___________ test_antes_de_chamar[limite_teto_usd_informado_0_recusa] ___________
+
+tmp_path = PosixPath('/sessions/rcw-01dqvkggp1xmtxfjcfcpduyu/tmp/pytest-of-rcw-01dqvkggp1xmtxfjcfcpduyu/pytest-0/test_antes_de_chamar_limite_te0')
+consumo = {}, tetos = {'teto_usd': 0}, esperado = 'recusa'
+motivo = 'reserva recusada'
+
+    @pytest.mark.parametrize("consumo, tetos, esperado, motivo", CASOS)
+    def test_antes_de_chamar(tmp_path, consumo, tetos, esperado, motivo):
+        guarda = criar_guarda(tmp_path, **consumo, **tetos)
+        if esperado == ACEITA:
+            guarda.antes_de_chamar()  # nao pode levantar excecao
+        else:
+>           with pytest.raises(OrcamentoExcedido, match=motivo):
+E           Failed: DID NOT RAISE <class 'executor.orcamento.OrcamentoExcedido'>
+
+qts/testes/test_guarda_orcamento_qts.py:92: Failed
+________ test_antes_de_chamar[limite_teto_chamadas_informado_0_recusa] _________
+
+tmp_path = PosixPath('/sessions/rcw-01dqvkggp1xmtxfjcfcpduyu/tmp/pytest-of-rcw-01dqvkggp1xmtxfjcfcpduyu/pytest-0/test_antes_de_chamar_limite_te1')
+consumo = {}, tetos = {'teto_chamadas': 0}, esperado = 'recusa'
+motivo = 'teto de chamadas'
+
+    @pytest.mark.parametrize("consumo, tetos, esperado, motivo", CASOS)
+    def test_antes_de_chamar(tmp_path, consumo, tetos, esperado, motivo):
+        guarda = criar_guarda(tmp_path, **consumo, **tetos)
+        if esperado == ACEITA:
+            guarda.antes_de_chamar()  # nao pode levantar excecao
+        else:
+>           with pytest.raises(OrcamentoExcedido, match=motivo):
+E           Failed: DID NOT RAISE <class 'executor.orcamento.OrcamentoExcedido'>
+
+qts/testes/test_guarda_orcamento_qts.py:92: Failed
+- generated xml file: /sessions/rcw-01dqvkggp1xmtxfjcfcpduyu/mnt/QTS-trabalho-b2/qts/evidencias/2026-10-29/etapa2-pytest-1a-execucao.xml -
+=========================== short test summary info ============================
+FAILED qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[limite_teto_usd_informado_0_recusa]
+FAILED qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[limite_teto_chamadas_informado_0_recusa]
+========================= 2 failed, 11 passed in 0.46s =========================
+exit code: 1
