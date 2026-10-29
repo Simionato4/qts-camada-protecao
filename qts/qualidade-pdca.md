@@ -19,10 +19,23 @@ pode entrar no codigo sem que ninguem perceba.
 - Criterio: execucao verde = todos os testes passam. Vermelha = ha falha a investigar.
 
 ## Do
-(preenchido com a 1a execucao real)
+Execucao no 1, disparada pelo push do commit `75c5da6` em 29/10/2026 (23:28 UTC).
+- Link: https://github.com/Simionato4/qts-camada-protecao/actions/runs/40973424872
+- Ambiente registrado pelo fluxo: Python 3.10.22, pytest 8.3.4.
+- Resultado: execucao vermelha (failure).
+- Artefato `relatorio-testes-1` baixado e extraido em
+  `qts/evidencias/2026-10-29/actions-execucao-1/`.
 
 ## Check
-(preenchido com o relatorio da 1a execucao)
+Lido em `relatorio-testes-1` (tcc-saida.txt, qts-saida.txt, *.xml):
+- Testes do TCC: 230 coletados, 4 desmarcados (`lento`), 226 passaram, 0 falharam,
+  0 pulados. Confirma que a suite sem `lento` roda sem Docker e sem o modelo de embeddings.
+  Um aviso de depreciacao do starlette (anyio.abc.BlockingPortal), sem efeito no resultado.
+- Testes QTS: 13 coletados, 11 passaram, 2 falharam:
+  `limite_teto_usd_informado_0_recusa` e `limite_teto_chamadas_informado_0_recusa`,
+  ambos com `DID NOT RAISE OrcamentoExcedido`. Mesmo resultado da execucao local da Etapa 2.
+- Conclusao: o fluxo detectou automaticamente o defeito do teto 0 na guarda de orcamento.
+  Investigacao e correcao na Etapa 5 (Act).
 
 ## Act
 (preenchido na Etapa 5: correcao e nova execucao)
