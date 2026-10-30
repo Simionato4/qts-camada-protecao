@@ -1,0 +1,24 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.22, pytest-8.3.4, pluggy-1.7.0 -- /opt/hostedtoolcache/Python/3.10.22/x64/bin/python
+cachedir: .pytest_cache
+rootdir: /home/runner/work/qts-camada-protecao/qts-camada-protecao
+configfile: pytest.ini
+plugins: anyio-4.15.1, Faker-40.38.0
+collecting ... collected 13 items
+
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[limite_usd_no_teto_aceita] PASSED [  7%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[limite_usd_acima_do_teto_recusa] PASSED [ 15%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[limite_chamadas_abaixo_do_teto_aceita] PASSED [ 23%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[limite_chamadas_no_teto_recusa] PASSED [ 30%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[particao_dentro_dos_dois_tetos_aceita] PASSED [ 38%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[particao_usd_acima_do_teto_recusa] PASSED [ 46%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[particao_chamadas_acima_do_teto_recusa] PASSED [ 53%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[particao_teto_usd_informado_1_substitui_padrao_recusa] PASSED [ 61%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[particao_teto_chamadas_informado_10_substitui_padrao_recusa] PASSED [ 69%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[limite_teto_usd_informado_0_recusa] PASSED [ 76%]
+qts/testes/test_guarda_orcamento_qts.py::test_antes_de_chamar[limite_teto_chamadas_informado_0_recusa] PASSED [ 84%]
+qts/testes/test_guarda_orcamento_qts.py::test_soma_da_fronteira_e_exata_em_ponto_flutuante PASSED [ 92%]
+qts/testes/test_guarda_orcamento_qts.py::test_guarda_nao_grava_ao_verificar PASSED [100%]
+
+- generated xml file: /home/runner/work/qts-camada-protecao/qts-camada-protecao/relatorio/qts-junit.xml -
+============================== 13 passed in 0.08s ==============================

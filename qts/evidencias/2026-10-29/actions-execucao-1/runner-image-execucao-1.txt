@@ -1,0 +1,7 @@
+# Sistema da execucao no 1 (job 123795532312), lido no log do passo "Set up job" em 29/10/2026.
+# O ambiente.txt dessa execucao nao registrava o sistema; o fluxo passou a registrar na execucao 2.
+2026-10-29T23:28:59.5554199Z ##[group]Operating System
+2026-10-29T23:28:59.5554933Z Ubuntu
+2026-10-29T23:28:59.5557775Z ##[group]Runner Image
+2026-10-29T23:28:59.5558473Z Image: ubuntu-24.04
+2026-10-29T23:28:59.5559042Z Version: 20261025.353.1
