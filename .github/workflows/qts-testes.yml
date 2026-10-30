@@ -10,7 +10,8 @@ on:
 
 jobs:
   testes:
-    runs-on: ubuntu-latest
+    # Fixado (nao ubuntu-latest) para que execucoes antes e depois da correcao rodem no mesmo sistema.
+    runs-on: ubuntu-24.04
     steps:
       - name: Baixar o codigo
         uses: actions/checkout@v6
@@ -28,7 +29,7 @@ jobs:
       - name: Registrar ambiente
         run: |
           mkdir -p relatorio
-          { echo "commit: $GITHUB_SHA"; python --version; python -m pytest --version; pip freeze; } > relatorio/ambiente.txt 2>&1
+          { echo "commit: $GITHUB_SHA"; grep PRETTY_NAME /etc/os-release; echo "ImageOS: $ImageOS $ImageVersion"; python --version; python -m pytest --version; pip freeze; } > relatorio/ambiente.txt 2>&1
 
       # Suite do TCC sem os testes marcados "lento" (o pytest.ini ja aplica -m "not lento").
       # Nenhum deles sobe Docker: o Qdrant roda em memoria.
