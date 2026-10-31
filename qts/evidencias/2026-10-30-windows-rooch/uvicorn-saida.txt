@@ -1,0 +1,2 @@
+﻿Get-Clipboard | Out-File -Encoding utf8 "$EV\uvicorn-saida.txt"
+Get-Content "$EV\uvicorn-saida.txt"
