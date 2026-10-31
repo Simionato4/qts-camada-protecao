@@ -1,7 +1,7 @@
 {
   "info": {
     "name": "QTS - camada de protecao - /entrada (Teste 2)",
-    "description": "Teste funcional de sistema do endpoint /entrada da camada (commit da7c66a), reaproveitavel como regressao. Responsaveis: Thiago Lanzarin e Rooch Vertus. A camada roda sozinha com uvicorn na porta 8010, sem modelo e sem n8n.",
+    "description": "Teste funcional de sistema do endpoint /entrada da camada (commit da7c66a), reaproveitavel como regressao. Responsaveis: Henrique Granel e Rooch Vertus. A camada roda sozinha com uvicorn na porta 8010, sem modelo e sem n8n.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [

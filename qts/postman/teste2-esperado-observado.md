@@ -1,6 +1,6 @@
 # Teste 2: teste funcional do endpoint /entrada (Postman / Newman)
 
-Responsaveis: Thiago Lanzarin e Rooch Vertus. Nivel do Modelo V: sistema (so a camada,
+Responsaveis: Henrique Granel e Rooch Vertus. Nivel do Modelo V: sistema (so a camada,
 sem modelo e sem n8n). Tecnica: teste funcional de caixa-preta, com particoes de entrada
 (texto comum, texto com dado pessoal, ponto invalido). Reaproveitavel como regressao.
 

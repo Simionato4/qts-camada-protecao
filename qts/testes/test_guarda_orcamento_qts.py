@@ -9,7 +9,7 @@ Tetos informados na configuracao substituem os padroes.
 
 Tecnicas (ISTQB CTFL v4.0.1, 4.2):
   - Analise de valores limite (Jhonatan): casos "limite_*", nos dois lados de cada fronteira.
-  - Particionamento de equivalencia (Henrique): casos "particao_*", um representativo
+  - Particionamento de equivalencia (Thiago): casos "particao_*", um representativo
     de cada particao valida (aceita) e invalida (recusa), e a particao "teto informado".
 
 Condicoes: arquivo de consumo em pasta temporaria (tmp_path) e simulado=True.

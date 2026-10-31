@@ -1,6 +1,6 @@
 # Investigacao e correcao: teto informado como 0 e ignorado
 
-Responsavel pela investigacao: Henrique Granel. Correcao aplicada SO na copia do trabalho;
+Responsavel pela investigacao: Thiago Lanzarin. Correcao aplicada SO na copia do trabalho;
 levar ao TCC e decisao do autor, fora deste trabalho.
 
 ## Falha observada

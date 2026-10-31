@@ -16,7 +16,7 @@ Grupo: Gabriel Simionato, Thiago Lanzarin, Henrique Granel, Jhonatan Negri e Roo
 | `postman/teste2-esperado-observado.md` | Esperado x observado do Teste 2 |
 | `investigacao-defeito-teto-zero.md` | Falha, causa, correcao, antes e depois |
 | `roteiro-apresentacao.md` | Roteiro de 16/11 por integrante |
-| `instrucoes-validacao-windows.md` | Prompt para Thiago e Rooch repetirem os testes no Windows e abrirem pull request |
+| `instrucoes-validacao-windows.md` | Prompt para Henrique e Rooch repetirem os testes no Windows e abrirem pull request |
 | `evidencias/2026-10-29/` | Saidas reais, relatorios JUnit, artefatos do Actions, prints, log da camada |
 | `../.github/workflows/qts-testes.yml` | Fluxo do GitHub Actions |
 

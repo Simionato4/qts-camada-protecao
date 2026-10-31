@@ -34,7 +34,7 @@ Cada integrante explica a propria parte e os conceitos que usou.
 - Demonstrar: `python -m pytest qts/testes -v` (execucao dinamica automatizada, compara sozinho).
 - Conceitos: analise de valores limite (ISTQB 4.2.2), teste de componente.
 
-## 3. Henrique: Teste 1, particionamento de equivalencia e investigacao da falha
+## 3. Thiago: Teste 1, particionamento de equivalencia e investigacao da falha
 - Particoes: dentro dos dois tetos (aceita), acima do teto em dolares (recusa), acima do teto
   de chamadas (recusa), teto informado na configuracao (substitui o padrao). Um representativo de cada.
 - Falha: teto 0 (dolares e chamadas, separados) foi aceito: `DID NOT RAISE`.
@@ -44,7 +44,7 @@ Cada integrante explica a propria parte e os conceitos que usou.
 - Achado fora do escopo: o mesmo padrao em precos e custo estimado, registrado e nao corrigido.
 - Conceitos: particionamento de equivalencia (ISTQB 4.2.1), defeito x falha, depuracao, reteste.
 
-## 4. Thiago: Teste 2, teste funcional do /entrada (Postman)
+## 4. Henrique: Teste 2, teste funcional do /entrada (Postman)
 - Subir so a camada com uvicorn na porta 8010 (sem Docker, sem modelo, sem n8n), log desviado.
 - Colecao com 3 requisicoes e scripts `pm.test` que conferem sozinhos:
   mensagem comum e com CPF: 200, `encaminhar`, texto identico, `versao_regras` presente;

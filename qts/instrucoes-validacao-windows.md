@@ -1,4 +1,4 @@
-# Prompt: validação no Windows do trabalho de QTS (Thiago e Rooch)
+# Prompt: validação no Windows do trabalho de QTS (Henrique e Rooch)
 
 > Como usar: copie este arquivo inteiro e cole como primeira mensagem para o seu assistente de IA
 > (Claude ou outro). Ele vai conduzir você etapa por etapa. Se preferir fazer sem IA, siga as
@@ -34,7 +34,7 @@ Regras de trabalho:
   `qts/README.md`, para (1) provar que outra pessoa consegue repetir o trabalho, que é um critério
   de nota, e (2) deixar o notebook pronto para a demonstração de 16/11.
 - Divisão:
-  - **Thiago Lanzarin:** Etapas 1 a 4 e **Etapa 5A (Postman, interface gráfica)**. É quem demonstra o Teste 2 no Postman.
+  - **Henrique Granel:** Etapas 1 a 4 e **Etapa 5A (Postman, interface gráfica)**. É quem demonstra o Teste 2 no Postman.
   - **Rooch Vertus:** Etapas 1 a 4 e **Etapa 5B (Newman, linha de comando)**. É quem demonstra a regressão automatizada.
   - Cada um faz no próprio notebook e abre o próprio pull request.
 
@@ -61,7 +61,7 @@ python --version
 - Precisa de **Python 3.10 ou mais novo** (a camada usa `str | None`, que não existe em versões anteriores).
   Recomendado 3.10, 3.11 ou 3.12. Se não tiver, instale pelo site python.org e marque "Add python.exe to PATH".
 - Se o comando `python` abrir a Microsoft Store, use `py -3.12` (ou a versão instalada) no lugar de `python` em todos os comandos.
-- Thiago: ter o **Postman** (aplicativo desktop) instalado.
+- Henrique: ter o **Postman** (aplicativo desktop) instalado.
 - Rooch: ter o **Node.js** (LTS) instalado; confira com `node --version` e `npx --version`.
 - Precisa de uma conta no GitHub.
 
@@ -145,7 +145,7 @@ Get-Content "$EV\pytest-saida.txt" -Tail 20
 
 Pare e mostre o final da saída. Compare com o esperado e diga se bateu.
 
-## Etapa 5A. Teste 2 no Postman (Thiago)
+## Etapa 5A. Teste 2 no Postman (Henrique)
 
 1. Abra **uma segunda janela do PowerShell**, entre na pasta do projeto e suba só a camada,
    com o log desviado para a sua pasta (troque o caminho pela sua pasta de evidências):
@@ -246,7 +246,7 @@ o GitHub pode pedir que o Gabriel aprove a execução ("Approve and run"). Isso 
 
 ## Para a apresentação (16/11)
 
-- Thiago: demonstrar o Collection Runner com os 10 testes passando e explicar teste funcional,
+- Henrique: demonstrar o Collection Runner com os 10 testes passando e explicar teste funcional,
   nível de sistema e esperado x observado (ver `qts/roteiro-apresentacao.md`, seção 4).
 - Rooch: demonstrar o Newman e o log da camada e explicar regressão automatizada
   (ver `qts/roteiro-apresentacao.md`, seção 5).
