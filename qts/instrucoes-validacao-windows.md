@@ -101,7 +101,10 @@ Toda saída desta etapa vai para uma pasta só sua. Troque `AAAA-MM-DD` pela dat
 $EV = "qts\evidencias\AAAA-MM-DD-windows-NOME"
 New-Item -ItemType Directory -Force $EV
 $env:PYTHONIOENCODING = "utf-8"
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 ```
+> As duas últimas linhas evitam caracteres estranhos (acentos, tabelas e símbolos) nas saídas
+> salvas pelo PowerShell 5.1, problema encontrado na validação do Rooch.
 > As variáveis `$EV` e `$env:...` valem só nesta janela do PowerShell. Se fechar a janela, rode de novo.
 
 Registre o ambiente:
@@ -147,15 +150,22 @@ Pare e mostre o final da saída. Compare com o esperado e diga se bateu.
 
 ## Etapa 5A. Teste 2 no Postman (Henrique)
 
-1. Abra **uma segunda janela do PowerShell**, entre na pasta do projeto e suba só a camada,
-   com o log desviado para a sua pasta (troque o caminho pela sua pasta de evidências):
+1. Abra **uma segunda janela do PowerShell**, entre na pasta do seu clone e suba só a camada.
+   O log da camada e a saída do servidor vão direto para arquivos na sua pasta de evidências
+   (troque `AAAA-MM-DD` e `NOME`; se o seu clone tiver outro nome de pasta, use o nome dele):
 ```powershell
 cd $HOME\Desktop\qts-camada-protecao
-$env:ARQUIVO_LOG = "qts\evidencias\AAAA-MM-DD-windows-NOME\camada-qts.jsonl"
-.\.venv\Scripts\python.exe -m uvicorn camada.app.main:app --port 8010
+$EV = "qts\evidencias\AAAA-MM-DD-windows-NOME"
+$env:ARQUIVO_LOG = "$EV\camada-qts.jsonl"
+$env:PYTHONUNBUFFERED = "1"
+cmd /c ".venv\Scripts\python.exe -m uvicorn camada.app.main:app --port 8010 --no-use-colors > $EV\uvicorn-saida.txt 2>&1"
 ```
-   Deixe essa janela aberta. Se o Windows perguntar sobre firewall, pode negar acesso a redes
-   externas: a camada só precisa de 127.0.0.1.
+   - `cmd /c ... > arquivo 2>&1` grava a saída do servidor direto no `uvicorn-saida.txt`, sem copiar
+     e colar (na validação do Rooch, copiar pela área de transferência salvou os comandos no lugar da saída).
+   - `--no-use-colors` evita os códigos de cor soltos (`←[32m`) no arquivo.
+   - A janela vai ficar parada, sem mostrar nada: é normal, a saída está indo para o arquivo.
+     Deixe-a aberta. Se o Windows perguntar sobre firewall, pode negar acesso a redes externas:
+     a camada só precisa de 127.0.0.1.
 2. No navegador, abra http://127.0.0.1:8010/saude . Esperado: `{"estado":"ok","versao_regras":"0.0.0-encaminhamento"}`.
 3. No Postman: **Import** > selecione `qts\postman\qts-entrada.postman_collection.json`.
    Confira que a variável `base_url` da coleção é `http://127.0.0.1:8010`.
@@ -170,8 +180,9 @@ $env:ARQUIVO_LOG = "qts\evidencias\AAAA-MM-DD-windows-NOME\camada-qts.jsonl"
      Se a sua versão do Postman não permitir rodar o Runner (limite do plano gratuito), registre
      isso por escrito e faça a Etapa 5B (Newman) no lugar.
    - Print de uma requisição aberta mostrando a aba **Test Results**: `postman-requisicao-02.png`.
-7. Volte à janela da camada e pare com **Ctrl+C**. Salve o que apareceu nela num arquivo
-   `uvicorn-saida.txt` (copiar e colar o texto da janela).
+7. Volte à janela da camada e pare com **Ctrl+C**. Confira a saída gravada:
+   `Get-Content -Encoding UTF8 "$EV\uvicorn-saida.txt"`. Esperado: linhas com `Uvicorn running`,
+   `GET /saude ... 200`, duas `POST /entrada ... 200` e uma `POST /entrada ... 422`.
 
 Pare e mostre o resultado: esperado x observado de cada requisição.
 
@@ -182,13 +193,16 @@ Newman é a versão de linha de comando do Postman: roda a mesma coleção sem i
 1. Suba a camada numa segunda janela do PowerShell, igual ao item 1 da Etapa 5A, e confira o `/saude`.
 2. Na primeira janela (com `$EV` definido):
 ```powershell
-npx --yes newman@6 run qts\postman\qts-entrada.postman_collection.json --reporters cli,json,junit --reporter-json-export "$EV\newman.json" --reporter-junit-export "$EV\newman.xml" --color off 2>&1 | Out-File -Encoding utf8 "$EV\newman-saida.txt"
-"exit code: $LASTEXITCODE" | Out-File -Encoding utf8 -Append "$EV\newman-saida.txt"
-Get-Content "$EV\newman-saida.txt"
+cmd /c "npx --yes newman@6 run qts\postman\qts-entrada.postman_collection.json --reporters cli,json,junit --reporter-json-export $EV\newman.json --reporter-junit-export $EV\newman.xml --color off > $EV\newman-saida.txt 2>&1"
+Add-Content -Encoding UTF8 "$EV\newman-saida.txt" "exit code: $LASTEXITCODE"
+Get-Content -Encoding UTF8 "$EV\newman-saida.txt"
 ```
+   O `cmd /c ... > arquivo 2>&1` grava a saída do Newman como ela sai, em UTF-8. Isso evita o bloco
+   vermelho `NativeCommandError` dos avisos do npm e os caracteres estranhos nas tabelas,
+   que apareceram com o `| Out-File` no PowerShell 5.1.
    Se o PowerShell bloquear o `npx` por política de execução, use `npx.cmd` no lugar de `npx`.
 3. **Esperado:** 3 requisições, 10 asserções, 0 falhas, `exit code: 0`.
-4. Pare a camada com Ctrl+C e salve o texto da janela em `uvicorn-saida.txt`.
+4. Pare a camada com Ctrl+C e confira o `uvicorn-saida.txt`, como no item 7 da Etapa 5A.
 5. Confira o log da camada: `Get-Content "$EV\camada-qts.jsonl"`. Esperado: 2 linhas (casos 01 e 02;
    o 03 é barrado antes pela validação). O texto da mensagem não aparece, só tamanho e resumo SHA-256.
 
