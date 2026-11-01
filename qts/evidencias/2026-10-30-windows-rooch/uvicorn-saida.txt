@@ -1,7 +1,6 @@
 Windows PowerShell
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-PS C:\WINDOWS\system32> cd "C:\Users\Rooch Vertus\documents\regressao-automatizada"
 >> $env:ARQUIVO_LOG = "qts\evidencias\2026-10-30-windows-rooch\camada-qts.jsonl"
 >> .\.venv\Scripts\python.exe -m uvicorn camada.app.main:app --port 8010
 ←[32mINFO←[0m:     Started server process [←[36m26256←[0m]
@@ -19,5 +18,3 @@ PS C:\WINDOWS\system32> cd "C:\Users\Rooch Vertus\documents\regressao-automatiza
 ←[32mINFO←[0m:     Waiting for application shutdown.
 ←[32mINFO←[0m:     Application shutdown complete.
 ←[32mINFO←[0m:     Finished server process [←[36m26256←[0m]
-PS C:\Users\Rooch Vertus\documents\regressao-automatizada> notepad "$EV\uvicorn-saida.txt"
-PS C:\Users\Rooch Vertus\documents\regressao-automatizada>
