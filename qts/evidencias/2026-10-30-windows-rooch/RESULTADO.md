@@ -10,6 +10,6 @@
   3. No PowerShell 5.1, o comando do Newman com 2>&1 transformou avisos do npm (npm warn deprecated) em um bloco vermelho NativeCommandError. Não afetou o resultado.
   4. No PowerShell 5.1, o newman-saida.txt ficou com caracteres estranhos no lugar das linhas da tabela e dos checks (problema de codificação ao redirecionar). Os arquivos newman.json e newman.xml não são afetados.
   5. O texto do console do uvicorn tem códigos de cor soltos (como ←[32m) porque o PowerShell 5.1 não os interpreta. Não afeta a execução.
-  6. Copiar o texto do console para uvicorn-saida.txt com Get-Clipboard não funcionou de primeira (a área de transferência veio com os próprios comandos). Foi resolvido colando o texto no Bloco de Notas.
+  6. Copiar o texto do console do uvicorn com Get-Clipboard não funcionou de primeira (a área de transferência veio com os próprios comandos). O texto foi salvo pelo Bloco de Notas, mas como a variável $EV não existia na janela nova, o arquivo foi criado fora da pasta de evidências e a primeira versão commitada de uvicorn-saida.txt continha só comandos. Corrigido em um segundo commit, com o arquivo certo.
   7. O campo instante do log da camada está em UTC (2026-10-31T01:33), enquanto o ambiente.txt está em horário local (2026-10-30 22:23). É o mesmo momento, com 3 horas de diferença de fuso.
 - Arquivos desta pasta: ambiente.txt, pip-freeze.txt, pytest-saida.txt, pytest.xml, newman-saida.txt, newman.json, newman.xml, camada-qts.jsonl, uvicorn-saida.txt, RESULTADO.md

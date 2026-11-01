@@ -1,2 +1,23 @@
-﻿Get-Clipboard | Out-File -Encoding utf8 "$EV\uvicorn-saida.txt"
-Get-Content "$EV\uvicorn-saida.txt"
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\WINDOWS\system32> cd "C:\Users\Rooch Vertus\documents\regressao-automatizada"
+>> $env:ARQUIVO_LOG = "qts\evidencias\2026-10-30-windows-rooch\camada-qts.jsonl"
+>> .\.venv\Scripts\python.exe -m uvicorn camada.app.main:app --port 8010
+←[32mINFO←[0m:     Started server process [←[36m26256←[0m]
+←[32mINFO←[0m:     Waiting for application startup.
+←[32mINFO←[0m:     Application startup complete.
+←[32mINFO←[0m:     Uvicorn running on ←[1mhttp://127.0.0.1:8010←[0m (Press CTRL+C to quit)
+←[32mINFO←[0m:     127.0.0.1:50702 - "←[1mGET /saude HTTP/1.1←[0m" ←[32m200 OK←[0m
+←[32mINFO←[0m:     127.0.0.1:50702 - "←[1mGET /favicon.ico HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+{"instante": "2026-10-31T01:33:16.915522+00:00", "evento": "requisicao_processada", "id_requisicao": "47619a59-2737-4219-bc71-c58efd8f6cfc", "ponto": "entrada", "condicao": "A", "resumo_entrada": "bcde70a3d4a51c2f", "tamanho_entrada": 40, "resumo_saida": "bcde70a3d4a51c2f", "tamanho_saida": 40, "decisao": "encaminhar", "quantidade_deteccoes": 0, "tempo_ms": 0.001600000359758269, "versao_regras": "0.0.0-encaminhamento"}
+←[32mINFO←[0m:     127.0.0.1:58258 - "←[1mPOST /entrada HTTP/1.1←[0m" ←[32m200 OK←[0m
+{"instante": "2026-10-31T01:33:17.031076+00:00", "evento": "requisicao_processada", "id_requisicao": "3f07d3df-dd88-4330-a1e5-21cca783ad43", "ponto": "entrada", "condicao": "A", "resumo_entrada": "32c967d9fcf4b816", "tamanho_entrada": 51, "resumo_saida": "32c967d9fcf4b816", "tamanho_saida": 51, "decisao": "encaminhar", "quantidade_deteccoes": 0, "tempo_ms": 0.001600000359758269, "versao_regras": "0.0.0-encaminhamento"}
+←[32mINFO←[0m:     127.0.0.1:58258 - "←[1mPOST /entrada HTTP/1.1←[0m" ←[32m200 OK←[0m
+←[32mINFO←[0m:     127.0.0.1:58258 - "←[1mPOST /entrada HTTP/1.1←[0m" ←[31m422 Unprocessable Content←[0m
+←[32mINFO←[0m:     Shutting down
+←[32mINFO←[0m:     Waiting for application shutdown.
+←[32mINFO←[0m:     Application shutdown complete.
+←[32mINFO←[0m:     Finished server process [←[36m26256←[0m]
+PS C:\Users\Rooch Vertus\documents\regressao-automatizada> notepad "$EV\uvicorn-saida.txt"
+PS C:\Users\Rooch Vertus\documents\regressao-automatizada>
