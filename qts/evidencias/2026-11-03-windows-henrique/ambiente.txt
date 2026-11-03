@@ -1,0 +1,10 @@
+﻿# Ambiente Windows - 2026-11-03T17:49:34 - Henrique
+commit: b2ca4e5295825deb2b32a39ffd84de30a9d7ca16
+branch: validacao-windows-henrique
+windows: Microsoft Windows NT 10.0.26200.0
+Microsoft Windows 11 Pro
+powershell: 5.1.26100.9711
+python do PATH (nao usado, ver python314-pip-erro.txt): Python 3.14.5
+python usado (py -3.12): Python 3.12.10
+git version 2.54.0.windows.1
+postman: 12.35.1
