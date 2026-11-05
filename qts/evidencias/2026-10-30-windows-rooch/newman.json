@@ -1,0 +1,1430 @@
+{
+  "collection": {
+    "item": [
+      {
+        "id": "2a1e3b7e-c760-42fb-ab3f-cbeeca2254b0",
+        "name": "01 mensagem comum - encaminha sem alterar",
+        "request": {
+          "description": {
+            "content": "Particao: texto comum.",
+            "type": "text/plain"
+          },
+          "url": {
+            "path": [
+              "entrada"
+            ],
+            "host": [
+              "{{base_url}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"ponto\": \"entrada\",\n  \"texto\": \"Qual o prazo de entrega do pedido 10482?\",\n  \"id_requisicao\": \"{{$guid}}\",\n  \"condicao\": \"A\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "fc815333-7bb7-4f63-a7b8-25d4f2bf1e3c",
+              "type": "text/javascript",
+              "exec": [
+                "// Esperado (ficha): 200, decisao = encaminhar, texto identico ao enviado, versao_regras presente.",
+                "const enviado = JSON.parse(pm.request.body.raw);",
+                "pm.test('status 200', () => pm.response.to.have.status(200));",
+                "const r = pm.response.json();",
+                "pm.test('decisao = encaminhar', () => pm.expect(r.decisao).to.eql('encaminhar'));",
+                "pm.test('texto identico ao enviado', () => pm.expect(r.texto).to.eql(enviado.texto));",
+                "pm.test('versao_regras presente', () => { pm.expect(r).to.have.property('versao_regras'); pm.expect(r.versao_regras).to.be.a('string').and.not.empty; });"
+              ],
+              "_lastExecutionId": "32435fd1-540b-424b-aa32-f5427762a06c"
+            }
+          }
+        ]
+      },
+      {
+        "id": "4fe374f4-3277-4f82-99fd-6e1db2734a39",
+        "name": "02 mensagem com CPF - encaminha sem alterar",
+        "request": {
+          "description": {
+            "content": "Particao: texto com dado pessoal (CPF de teste). Na versao da7c66a ainda nao ha regra: o esperado e encaminhar sem mascarar.",
+            "type": "text/plain"
+          },
+          "url": {
+            "path": [
+              "entrada"
+            ],
+            "host": [
+              "{{base_url}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"ponto\": \"entrada\",\n  \"texto\": \"Meu CPF e 529.982.247-25 e quero cancelar a compra.\",\n  \"id_requisicao\": \"{{$guid}}\",\n  \"condicao\": \"A\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "8266acc8-cc41-4bee-af70-e57511cd9c04",
+              "type": "text/javascript",
+              "exec": [
+                "// Esperado (ficha): 200, decisao = encaminhar, texto identico ao enviado, versao_regras presente.",
+                "const enviado = JSON.parse(pm.request.body.raw);",
+                "pm.test('status 200', () => pm.response.to.have.status(200));",
+                "const r = pm.response.json();",
+                "pm.test('decisao = encaminhar', () => pm.expect(r.decisao).to.eql('encaminhar'));",
+                "pm.test('texto identico ao enviado', () => pm.expect(r.texto).to.eql(enviado.texto));",
+                "pm.test('versao_regras presente', () => { pm.expect(r).to.have.property('versao_regras'); pm.expect(r.versao_regras).to.be.a('string').and.not.empty; });"
+              ],
+              "_lastExecutionId": "dd20d5a8-adff-4571-bae2-39edd96de6f4"
+            }
+          }
+        ]
+      },
+      {
+        "id": "362310d9-9ba4-428f-92ad-6dadd4fb9ab0",
+        "name": "03 ponto invalido - 422",
+        "request": {
+          "description": {
+            "content": "Particao invalida: campo ponto fora do contrato.",
+            "type": "text/plain"
+          },
+          "url": {
+            "path": [
+              "entrada"
+            ],
+            "host": [
+              "{{base_url}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"ponto\": \"inexistente\",\n  \"texto\": \"teste\",\n  \"id_requisicao\": \"{{$guid}}\",\n  \"condicao\": \"A\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "be56c260-f840-4475-9d32-3776f7094b9d",
+              "type": "text/javascript",
+              "exec": [
+                "// Esperado (ficha): ponto fora de entrada|contexto|saida e recusado pela validacao do contrato.",
+                "pm.test('status 422', () => pm.response.to.have.status(422));",
+                "pm.test('erro aponta o campo ponto', () => { const d = pm.response.json().detail; pm.expect(d.some(e => e.loc.includes('ponto'))).to.be.true; });"
+              ],
+              "_lastExecutionId": "43a3a2af-cc4a-439e-8c36-4f51b01b24b5"
+            }
+          }
+        ]
+      }
+    ],
+    "event": [],
+    "variable": [
+      {
+        "type": "any",
+        "value": "http://127.0.0.1:8010",
+        "key": "base_url"
+      }
+    ],
+    "info": {
+      "_postman_id": "8a41e333-4f71-4478-95e0-6e6d8db7bde0",
+      "name": "QTS - camada de protecao - /entrada (Teste 2)",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "description": {
+        "content": "Teste funcional de sistema do endpoint /entrada da camada (commit da7c66a), reaproveitavel como regressao. Responsaveis: Thiago Lanzarin e Rooch Vertus. A camada roda sozinha com uvicorn na porta 8010, sem modelo e sem n8n.",
+        "type": "text/plain"
+      }
+    }
+  },
+  "environment": {
+    "id": "366bccb1-8104-424d-a74f-1b1edef040f6",
+    "values": []
+  },
+  "globals": {
+    "id": "5b50f574-53d9-4068-950f-ff54ada07cdc",
+    "values": []
+  },
+  "run": {
+    "stats": {
+      "iterations": {
+        "total": 1,
+        "pending": 0,
+        "failed": 0
+      },
+      "items": {
+        "total": 3,
+        "pending": 0,
+        "failed": 0
+      },
+      "scripts": {
+        "total": 3,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequests": {
+        "total": 3,
+        "pending": 0,
+        "failed": 0
+      },
+      "requests": {
+        "total": 3,
+        "pending": 0,
+        "failed": 0
+      },
+      "tests": {
+        "total": 3,
+        "pending": 0,
+        "failed": 0
+      },
+      "assertions": {
+        "total": 10,
+        "pending": 0,
+        "failed": 0
+      },
+      "testScripts": {
+        "total": 3,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequestScripts": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      }
+    },
+    "timings": {
+      "responseAverage": 13,
+      "responseMin": 5,
+      "responseMax": 26,
+      "responseSd": 9.273618495495704,
+      "dnsAverage": 0,
+      "dnsMin": 0,
+      "dnsMax": 0,
+      "dnsSd": 0,
+      "firstByteAverage": 0,
+      "firstByteMin": 0,
+      "firstByteMax": 0,
+      "firstByteSd": 0,
+      "started": 1793410396845,
+      "completed": 1793410397166
+    },
+    "executions": [
+      {
+        "cursor": {
+          "position": 0,
+          "iteration": 0,
+          "length": 3,
+          "cycles": 1,
+          "empty": false,
+          "eof": false,
+          "bof": true,
+          "cr": false,
+          "ref": "a06885a6-2cb7-41e9-b58f-fc8a8648cdd3",
+          "httpRequestId": "a389ae04-93af-4f61-b8f5-ff96ea3255a1"
+        },
+        "item": {
+          "id": "2a1e3b7e-c760-42fb-ab3f-cbeeca2254b0",
+          "name": "01 mensagem comum - encaminha sem alterar",
+          "request": {
+            "description": {
+              "content": "Particao: texto comum.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "entrada"
+              ],
+              "host": [
+                "{{base_url}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ponto\": \"entrada\",\n  \"texto\": \"Qual o prazo de entrega do pedido 10482?\",\n  \"id_requisicao\": \"{{$guid}}\",\n  \"condicao\": \"A\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "fc815333-7bb7-4f63-a7b8-25d4f2bf1e3c",
+                "type": "text/javascript",
+                "exec": [
+                  "// Esperado (ficha): 200, decisao = encaminhar, texto identico ao enviado, versao_regras presente.",
+                  "const enviado = JSON.parse(pm.request.body.raw);",
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "const r = pm.response.json();",
+                  "pm.test('decisao = encaminhar', () => pm.expect(r.decisao).to.eql('encaminhar'));",
+                  "pm.test('texto identico ao enviado', () => pm.expect(r.texto).to.eql(enviado.texto));",
+                  "pm.test('versao_regras presente', () => { pm.expect(r).to.have.property('versao_regras'); pm.expect(r.versao_regras).to.be.a('string').and.not.empty; });"
+                ],
+                "_lastExecutionId": "32435fd1-540b-424b-aa32-f5427762a06c"
+              }
+            }
+          ]
+        },
+        "request": {
+          "description": {
+            "content": "Particao: texto comum.",
+            "type": "text/plain"
+          },
+          "url": {
+            "protocol": "http",
+            "port": "8010",
+            "path": [
+              "entrada"
+            ],
+            "host": [
+              "127",
+              "0",
+              "0",
+              "1"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "a552bcc5-8c63-44dd-93e3-1736352f4cab",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8010",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "157",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"ponto\": \"entrada\",\n  \"texto\": \"Qual o prazo de entrega do pedido 10482?\",\n  \"id_requisicao\": \"47619a59-2737-4219-bc71-c58efd8f6cfc\",\n  \"condicao\": \"A\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": {
+          "id": "52df77e2-cbe8-4b54-a198-a8b052ee678c",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "date",
+              "value": "Sat, 31 Oct 2026 01:33:16 GMT"
+            },
+            {
+              "key": "server",
+              "value": "uvicorn"
+            },
+            {
+              "key": "content-length",
+              "value": "194"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              100,
+              101,
+              99,
+              105,
+              115,
+              97,
+              111,
+              34,
+              58,
+              34,
+              101,
+              110,
+              99,
+              97,
+              109,
+              105,
+              110,
+              104,
+              97,
+              114,
+              34,
+              44,
+              34,
+              116,
+              101,
+              120,
+              116,
+              111,
+              34,
+              58,
+              34,
+              81,
+              117,
+              97,
+              108,
+              32,
+              111,
+              32,
+              112,
+              114,
+              97,
+              122,
+              111,
+              32,
+              100,
+              101,
+              32,
+              101,
+              110,
+              116,
+              114,
+              101,
+              103,
+              97,
+              32,
+              100,
+              111,
+              32,
+              112,
+              101,
+              100,
+              105,
+              100,
+              111,
+              32,
+              49,
+              48,
+              52,
+              56,
+              50,
+              63,
+              34,
+              44,
+              34,
+              100,
+              101,
+              116,
+              101,
+              99,
+              99,
+              111,
+              101,
+              115,
+              34,
+              58,
+              91,
+              93,
+              44,
+              34,
+              116,
+              101,
+              109,
+              112,
+              111,
+              95,
+              109,
+              115,
+              34,
+              58,
+              48,
+              46,
+              48,
+              48,
+              49,
+              54,
+              48,
+              48,
+              48,
+              48,
+              48,
+              51,
+              53,
+              57,
+              55,
+              53,
+              56,
+              50,
+              54,
+              57,
+              44,
+              34,
+              118,
+              101,
+              114,
+              115,
+              97,
+              111,
+              95,
+              114,
+              101,
+              103,
+              114,
+              97,
+              115,
+              34,
+              58,
+              34,
+              48,
+              46,
+              48,
+              46,
+              48,
+              45,
+              101,
+              110,
+              99,
+              97,
+              109,
+              105,
+              110,
+              104,
+              97,
+              109,
+              101,
+              110,
+              116,
+              111,
+              34,
+              44,
+              34,
+              112,
+              111,
+              110,
+              116,
+              111,
+              34,
+              58,
+              34,
+              101,
+              110,
+              116,
+              114,
+              97,
+              100,
+              97,
+              34,
+              44,
+              34,
+              99,
+              111,
+              110,
+              100,
+              105,
+              99,
+              97,
+              111,
+              34,
+              58,
+              34,
+              65,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 26,
+          "responseSize": 194
+        },
+        "id": "2a1e3b7e-c760-42fb-ab3f-cbeeca2254b0",
+        "assertions": [
+          {
+            "assertion": "status 200",
+            "skipped": false
+          },
+          {
+            "assertion": "decisao = encaminhar",
+            "skipped": false
+          },
+          {
+            "assertion": "texto identico ao enviado",
+            "skipped": false
+          },
+          {
+            "assertion": "versao_regras presente",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "2eca796d-bb24-4b0d-b532-ff4c7ad01f42",
+          "length": 3,
+          "cycles": 1,
+          "position": 1,
+          "iteration": 0,
+          "httpRequestId": "2e8d446c-c14e-49cc-8e91-ec7d1c85e60d"
+        },
+        "item": {
+          "id": "4fe374f4-3277-4f82-99fd-6e1db2734a39",
+          "name": "02 mensagem com CPF - encaminha sem alterar",
+          "request": {
+            "description": {
+              "content": "Particao: texto com dado pessoal (CPF de teste). Na versao da7c66a ainda nao ha regra: o esperado e encaminhar sem mascarar.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "entrada"
+              ],
+              "host": [
+                "{{base_url}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ponto\": \"entrada\",\n  \"texto\": \"Meu CPF e 529.982.247-25 e quero cancelar a compra.\",\n  \"id_requisicao\": \"{{$guid}}\",\n  \"condicao\": \"A\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "8266acc8-cc41-4bee-af70-e57511cd9c04",
+                "type": "text/javascript",
+                "exec": [
+                  "// Esperado (ficha): 200, decisao = encaminhar, texto identico ao enviado, versao_regras presente.",
+                  "const enviado = JSON.parse(pm.request.body.raw);",
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "const r = pm.response.json();",
+                  "pm.test('decisao = encaminhar', () => pm.expect(r.decisao).to.eql('encaminhar'));",
+                  "pm.test('texto identico ao enviado', () => pm.expect(r.texto).to.eql(enviado.texto));",
+                  "pm.test('versao_regras presente', () => { pm.expect(r).to.have.property('versao_regras'); pm.expect(r.versao_regras).to.be.a('string').and.not.empty; });"
+                ],
+                "_lastExecutionId": "dd20d5a8-adff-4571-bae2-39edd96de6f4"
+              }
+            }
+          ]
+        },
+        "request": {
+          "description": {
+            "content": "Particao: texto com dado pessoal (CPF de teste). Na versao da7c66a ainda nao ha regra: o esperado e encaminhar sem mascarar.",
+            "type": "text/plain"
+          },
+          "url": {
+            "protocol": "http",
+            "port": "8010",
+            "path": [
+              "entrada"
+            ],
+            "host": [
+              "127",
+              "0",
+              "0",
+              "1"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "be539332-5f00-4770-82a6-57bd8dfa2019",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8010",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "168",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"ponto\": \"entrada\",\n  \"texto\": \"Meu CPF e 529.982.247-25 e quero cancelar a compra.\",\n  \"id_requisicao\": \"3f07d3df-dd88-4330-a1e5-21cca783ad43\",\n  \"condicao\": \"A\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": {
+          "id": "e96c4de4-d290-4057-ac74-c9eafac1a087",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "date",
+              "value": "Sat, 31 Oct 2026 01:33:16 GMT"
+            },
+            {
+              "key": "server",
+              "value": "uvicorn"
+            },
+            {
+              "key": "content-length",
+              "value": "205"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              100,
+              101,
+              99,
+              105,
+              115,
+              97,
+              111,
+              34,
+              58,
+              34,
+              101,
+              110,
+              99,
+              97,
+              109,
+              105,
+              110,
+              104,
+              97,
+              114,
+              34,
+              44,
+              34,
+              116,
+              101,
+              120,
+              116,
+              111,
+              34,
+              58,
+              34,
+              77,
+              101,
+              117,
+              32,
+              67,
+              80,
+              70,
+              32,
+              101,
+              32,
+              53,
+              50,
+              57,
+              46,
+              57,
+              56,
+              50,
+              46,
+              50,
+              52,
+              55,
+              45,
+              50,
+              53,
+              32,
+              101,
+              32,
+              113,
+              117,
+              101,
+              114,
+              111,
+              32,
+              99,
+              97,
+              110,
+              99,
+              101,
+              108,
+              97,
+              114,
+              32,
+              97,
+              32,
+              99,
+              111,
+              109,
+              112,
+              114,
+              97,
+              46,
+              34,
+              44,
+              34,
+              100,
+              101,
+              116,
+              101,
+              99,
+              99,
+              111,
+              101,
+              115,
+              34,
+              58,
+              91,
+              93,
+              44,
+              34,
+              116,
+              101,
+              109,
+              112,
+              111,
+              95,
+              109,
+              115,
+              34,
+              58,
+              48,
+              46,
+              48,
+              48,
+              49,
+              54,
+              48,
+              48,
+              48,
+              48,
+              48,
+              51,
+              53,
+              57,
+              55,
+              53,
+              56,
+              50,
+              54,
+              57,
+              44,
+              34,
+              118,
+              101,
+              114,
+              115,
+              97,
+              111,
+              95,
+              114,
+              101,
+              103,
+              114,
+              97,
+              115,
+              34,
+              58,
+              34,
+              48,
+              46,
+              48,
+              46,
+              48,
+              45,
+              101,
+              110,
+              99,
+              97,
+              109,
+              105,
+              110,
+              104,
+              97,
+              109,
+              101,
+              110,
+              116,
+              111,
+              34,
+              44,
+              34,
+              112,
+              111,
+              110,
+              116,
+              111,
+              34,
+              58,
+              34,
+              101,
+              110,
+              116,
+              114,
+              97,
+              100,
+              97,
+              34,
+              44,
+              34,
+              99,
+              111,
+              110,
+              100,
+              105,
+              99,
+              97,
+              111,
+              34,
+              58,
+              34,
+              65,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 8,
+          "responseSize": 205
+        },
+        "id": "4fe374f4-3277-4f82-99fd-6e1db2734a39",
+        "assertions": [
+          {
+            "assertion": "status 200",
+            "skipped": false
+          },
+          {
+            "assertion": "decisao = encaminhar",
+            "skipped": false
+          },
+          {
+            "assertion": "texto identico ao enviado",
+            "skipped": false
+          },
+          {
+            "assertion": "versao_regras presente",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "2b349c47-b778-403d-b0b9-3ce5fe847574",
+          "length": 3,
+          "cycles": 1,
+          "position": 2,
+          "iteration": 0,
+          "httpRequestId": "ce333ca4-7741-436b-bb69-45f76da44ba3"
+        },
+        "item": {
+          "id": "362310d9-9ba4-428f-92ad-6dadd4fb9ab0",
+          "name": "03 ponto invalido - 422",
+          "request": {
+            "description": {
+              "content": "Particao invalida: campo ponto fora do contrato.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "entrada"
+              ],
+              "host": [
+                "{{base_url}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ponto\": \"inexistente\",\n  \"texto\": \"teste\",\n  \"id_requisicao\": \"{{$guid}}\",\n  \"condicao\": \"A\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "be56c260-f840-4475-9d32-3776f7094b9d",
+                "type": "text/javascript",
+                "exec": [
+                  "// Esperado (ficha): ponto fora de entrada|contexto|saida e recusado pela validacao do contrato.",
+                  "pm.test('status 422', () => pm.response.to.have.status(422));",
+                  "pm.test('erro aponta o campo ponto', () => { const d = pm.response.json().detail; pm.expect(d.some(e => e.loc.includes('ponto'))).to.be.true; });"
+                ],
+                "_lastExecutionId": "43a3a2af-cc4a-439e-8c36-4f51b01b24b5"
+              }
+            }
+          ]
+        },
+        "request": {
+          "description": {
+            "content": "Particao invalida: campo ponto fora do contrato.",
+            "type": "text/plain"
+          },
+          "url": {
+            "protocol": "http",
+            "port": "8010",
+            "path": [
+              "entrada"
+            ],
+            "host": [
+              "127",
+              "0",
+              "0",
+              "1"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "634a6c0a-10d3-472d-9fae-7c4e90d41f30",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8010",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "126",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"ponto\": \"inexistente\",\n  \"texto\": \"teste\",\n  \"id_requisicao\": \"b0d6ac05-81ef-490f-9a20-7ba1bc377b34\",\n  \"condicao\": \"A\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": {
+          "id": "3649f55b-cdaf-439a-9669-02657dc2ff75",
+          "status": "Unprocessable Content",
+          "code": 422,
+          "header": [
+            {
+              "key": "date",
+              "value": "Sat, 31 Oct 2026 01:33:16 GMT"
+            },
+            {
+              "key": "server",
+              "value": "uvicorn"
+            },
+            {
+              "key": "content-length",
+              "value": "193"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              100,
+              101,
+              116,
+              97,
+              105,
+              108,
+              34,
+              58,
+              91,
+              123,
+              34,
+              116,
+              121,
+              112,
+              101,
+              34,
+              58,
+              34,
+              108,
+              105,
+              116,
+              101,
+              114,
+              97,
+              108,
+              95,
+              101,
+              114,
+              114,
+              111,
+              114,
+              34,
+              44,
+              34,
+              108,
+              111,
+              99,
+              34,
+              58,
+              91,
+              34,
+              98,
+              111,
+              100,
+              121,
+              34,
+              44,
+              34,
+              112,
+              111,
+              110,
+              116,
+              111,
+              34,
+              93,
+              44,
+              34,
+              109,
+              115,
+              103,
+              34,
+              58,
+              34,
+              73,
+              110,
+              112,
+              117,
+              116,
+              32,
+              115,
+              104,
+              111,
+              117,
+              108,
+              100,
+              32,
+              98,
+              101,
+              32,
+              39,
+              101,
+              110,
+              116,
+              114,
+              97,
+              100,
+              97,
+              39,
+              44,
+              32,
+              39,
+              99,
+              111,
+              110,
+              116,
+              101,
+              120,
+              116,
+              111,
+              39,
+              32,
+              111,
+              114,
+              32,
+              39,
+              115,
+              97,
+              105,
+              100,
+              97,
+              39,
+              34,
+              44,
+              34,
+              105,
+              110,
+              112,
+              117,
+              116,
+              34,
+              58,
+              34,
+              105,
+              110,
+              101,
+              120,
+              105,
+              115,
+              116,
+              101,
+              110,
+              116,
+              101,
+              34,
+              44,
+              34,
+              99,
+              116,
+              120,
+              34,
+              58,
+              123,
+              34,
+              101,
+              120,
+              112,
+              101,
+              99,
+              116,
+              101,
+              100,
+              34,
+              58,
+              34,
+              39,
+              101,
+              110,
+              116,
+              114,
+              97,
+              100,
+              97,
+              39,
+              44,
+              32,
+              39,
+              99,
+              111,
+              110,
+              116,
+              101,
+              120,
+              116,
+              111,
+              39,
+              32,
+              111,
+              114,
+              32,
+              39,
+              115,
+              97,
+              105,
+              100,
+              97,
+              39,
+              34,
+              125,
+              125,
+              93,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 5,
+          "responseSize": 193
+        },
+        "id": "362310d9-9ba4-428f-92ad-6dadd4fb9ab0",
+        "assertions": [
+          {
+            "assertion": "status 422",
+            "skipped": false
+          },
+          {
+            "assertion": "erro aponta o campo ponto",
+            "skipped": false
+          }
+        ]
+      }
+    ],
+    "transfers": {
+      "responseTotal": 592
+    },
+    "failures": [],
+    "error": null
+  }
+}

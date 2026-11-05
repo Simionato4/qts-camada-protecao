@@ -1,0 +1,8 @@
+﻿# Ambiente Windows - 2026-10-30T22:23:14 - rooch
+commit: 19a0f516bc29c225ef25ad0d01db40d892abe8c2
+branch: validacao-windows-rooch
+windows: Microsoft Windows NT 10.0.26200.0
+Microsoft Windows 11 Pro
+powershell: 5.1.26100.9711
+Python 3.13.3
+git version 2.49.0.windows.1
