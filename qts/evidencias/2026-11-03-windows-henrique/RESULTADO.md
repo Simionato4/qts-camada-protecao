@@ -29,7 +29,10 @@ Execução conduzida com assistente de IA (Claude Code), seguindo `qts/instrucoe
 - Log da camada: esperado 2 eventos sem o texto | observado: **3 eventos**, `decisao` = encaminhar, só tamanho e
   resumo SHA-256, nenhum texto e nenhum CPF (`camada-qts.jsonl`). O terceiro evento é o reenvio manual da
   requisição 02 para o print (mesmo resumo `32c967d9fcf4b816` e tamanho 51 do evento da 02 no Runner). O caso 03
-  não gerou evento, como esperado (barrado pela validação).
+  não gerou evento, como esperado (barrado pela validação). Os resumos `bcde70a3d4a51c2f` (01) e
+  `32c967d9fcf4b816` (02) são os mesmos da execução em Linux e da validação do Rooch, ou seja, os mesmos textos
+  passaram pela camada. Os horários e os `id_requisicao` do `camada-qts.jsonl` aparecem iguais no
+  `uvicorn-saida.txt`, que foi gravado direto em arquivo (`cmd /c ... > uvicorn-saida.txt 2>&1`), sem cópia do console.
 - Diferenças em relação ao README ou problemas encontrados:
   1. **Python 3.14 não funciona.** O `qts/README.md` (seção 2) usa `python -m venv .venv`, e as instruções pedem
      "Python 3.10 ou mais novo". Nesta máquina o `python` do PATH era o 3.14.5, e o `pip install` falha com
