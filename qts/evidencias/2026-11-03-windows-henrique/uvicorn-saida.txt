@@ -1,0 +1,16 @@
+INFO:     Started server process [31116]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8010 (Press CTRL+C to quit)
+INFO:     127.0.0.1:55572 - "GET /saude HTTP/1.1" 200 OK
+{"instante": "2026-11-03T21:54:40.589470+00:00", "evento": "requisicao_processada", "id_requisicao": "d9168e68-5a36-43c7-a62a-00ef7cd569f3", "ponto": "entrada", "condicao": "A", "resumo_entrada": "bcde70a3d4a51c2f", "tamanho_entrada": 40, "resumo_saida": "bcde70a3d4a51c2f", "tamanho_saida": 40, "decisao": "encaminhar", "quantidade_deteccoes": 0, "tempo_ms": 0.036299985367804766, "versao_regras": "0.0.0-encaminhamento"}
+INFO:     127.0.0.1:53000 - "POST /entrada HTTP/1.1" 200 OK
+{"instante": "2026-11-03T21:54:40.692500+00:00", "evento": "requisicao_processada", "id_requisicao": "33c03ad8-63ae-4575-88b5-1f480cdb3ebf", "ponto": "entrada", "condicao": "A", "resumo_entrada": "32c967d9fcf4b816", "tamanho_entrada": 51, "resumo_saida": "32c967d9fcf4b816", "tamanho_saida": 51, "decisao": "encaminhar", "quantidade_deteccoes": 0, "tempo_ms": 0.000600004568696022, "versao_regras": "0.0.0-encaminhamento"}
+INFO:     127.0.0.1:53001 - "POST /entrada HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53002 - "POST /entrada HTTP/1.1" 422 Unprocessable Entity
+{"instante": "2026-11-03T21:55:22.707573+00:00", "evento": "requisicao_processada", "id_requisicao": "3d15237a-95c3-43e3-8210-544fddada701", "ponto": "entrada", "condicao": "A", "resumo_entrada": "32c967d9fcf4b816", "tamanho_entrada": 51, "resumo_saida": "32c967d9fcf4b816", "tamanho_saida": 51, "decisao": "encaminhar", "quantidade_deteccoes": 0, "tempo_ms": 0.000400003045797348, "versao_regras": "0.0.0-encaminhamento"}
+INFO:     127.0.0.1:57829 - "POST /entrada HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31116]
