@@ -64,4 +64,5 @@ Cada integrante explica a propria parte e os conceitos que usou.
 - Esperado x observado dos dois testes; falha encontrada, corrigida e reexecutada.
 - O que ficou fora: regras de deteccao, `/contexto` e `/saida`, recuperador, modelo, n8n, Docker,
   desempenho, valores alem dos testados.
-- Como outra pessoa repete: `qts/README.md`.
+- Como outra pessoa repete: `qts/README.md`. Prova: Rooch e Henrique repetiram tudo no Windows
+  (13 de 13 e 10 de 10), com os mesmos resumos SHA-256 no log da camada.

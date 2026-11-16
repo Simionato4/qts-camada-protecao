@@ -109,7 +109,7 @@ npx --yes newman@6 run qts\postman\qts-entrada.postman_collection.json
 4. Por que o log da camada guarda um resumo e não o texto?
 5. O que prova que os mesmos textos passaram pela camada no Linux e no Windows?
 6. Por que validar no Windows, se já tinha sido executado em Linux?
-7. Você usou Python 3.13 e o resto do grupo 3.10. Isso invalida o resultado?
+7. Você usou Python 3.13, a execução em Linux 3.10 e o Henrique 3.12. Isso invalida o resultado? (E por que o 3.14 não funciona?)
 8. Que problemas você encontrou e o que foi feito com eles?
 9. Como a sua entrega chegou ao repositório? Por que pull request e não push direto?
 10. O que ficou fora do seu teste?

@@ -38,7 +38,11 @@ git checkout qts-trabalho-b2
 ```
 Para ver o defeito antes da correcao, use `git checkout 75c5da6` (testes ja existem, correcao nao).
 
-### 2. Ambiente Python (3.10) e dependencias minimas
+### 2. Ambiente Python e dependencias minimas
+Use **Python 3.10 a 3.13**. Validado: 3.10 (Linux), 3.12 (Windows, Henrique) e 3.13 (Windows, Rooch).
+**Python 3.14 nao funciona**: o `pydantic==2.10.4` fixado exige `pydantic-core==2.27.2`, que nao tem pacote
+para 3.14 (erro registrado em `evidencias/2026-11-03-windows-henrique/python314-pip-erro.txt`).
+
 Linux / macOS:
 ```bash
 python3 -m venv .venv
@@ -46,7 +50,7 @@ python3 -m venv .venv
 ```
 Windows (PowerShell):
 ```powershell
-python -m venv .venv
+py -3.12 -m venv .venv   # ou outra versao instalada entre 3.10 e 3.13
 .\.venv\Scripts\python.exe -m pip install -r camada\requirements.txt pytest==8.3.4
 ```
 `.venv/` ja esta no `.gitignore`. Para a suite completa do TCC, instale `requirements-dev.txt`
@@ -84,6 +88,15 @@ Esperado: 3 requisicoes, 10 assercoes, 0 falhas. Encerre a camada com Ctrl+C.
 Todo push na branch dispara `.github/workflows/qts-testes.yml`. Resultado em
 https://github.com/Simionato4/qts-camada-protecao/actions ; o relatorio fica no artefato
 `relatorio-testes-<numero>` de cada execucao. Commits com `[skip ci]` na mensagem nao disparam.
+
+## Repeticao por outras pessoas (Windows)
+| Quem | Data | Sistema | Python | pytest | Teste 2 | Evidencias |
+|---|---|---|---|---|---|---|
+| Rooch Vertus | 30/10 | Windows 11 Pro, PowerShell 5.1 | 3.13.3 | 13 de 13 | Newman: 10 de 10 | `evidencias/2026-10-30-windows-rooch/` |
+| Henrique Granel | 03/11 | Windows 11 Pro, PowerShell 5.1 | 3.12.10 | 13 de 13 (antes da correcao: 11 e 2 falhas) | Postman Runner: 10 de 10 | `evidencias/2026-11-03-windows-henrique/` |
+
+Nas duas, o log da camada registrou os mesmos resumos SHA-256 da execucao em Linux
+(`bcde70a3d4a51c2f` e `32c967d9fcf4b816`): os mesmos textos passaram pela camada.
 
 ## O que ficou fora
 Regras de deteccao da camada (ainda nao existem nesta versao), `/contexto` e `/saida`,

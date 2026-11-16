@@ -58,8 +58,9 @@ Verifique e registre as versões:
 git --version
 python --version
 ```
-- Precisa de **Python 3.10 ou mais novo** (a camada usa `str | None`, que não existe em versões anteriores).
-  Recomendado 3.10, 3.11 ou 3.12. Se não tiver, instale pelo site python.org e marque "Add python.exe to PATH".
+- Precisa de **Python 3.10 a 3.13** (a camada usa `str | None`, que não existe antes do 3.10, e o
+  **3.14 não funciona**: falta `pydantic-core==2.27.2` para ele, erro registrado pelo Henrique).
+  Recomendado 3.12. Se não tiver, instale pelo site python.org e marque "Add python.exe to PATH".
 - Se o comando `python` abrir a Microsoft Store, use `py -3.12` (ou a versão instalada) no lugar de `python` em todos os comandos.
 - Henrique: ter o **Postman** (aplicativo desktop) instalado.
 - Rooch: ter o **Node.js** (LTS) instalado; confira com `node --version` e `npx --version`.
@@ -128,7 +129,7 @@ Pare e mostre o conteúdo do `ambiente.txt`.
 
 O `.venv` é um Python isolado só para este projeto; nada é instalado no Python global.
 ```powershell
-python -m venv .venv
+py -3.12 -m venv .venv   # ou outra versão instalada entre 3.10 e 3.13
 .\.venv\Scripts\python.exe -m pip install -r camada\requirements.txt pytest==8.3.4
 .\.venv\Scripts\python.exe -m pip freeze | Out-File -Encoding utf8 "$EV\pip-freeze.txt"
 .\.venv\Scripts\python.exe -m pytest --version
