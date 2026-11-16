@@ -16,6 +16,7 @@ Grupo: Gabriel Simionato, Thiago Lanzarin, Henrique Granel, Jhonatan Negri e Roo
 | `postman/teste2-esperado-observado.md` | Esperado x observado do Teste 2 |
 | `investigacao-defeito-teto-zero.md` | Falha, causa, correcao, antes e depois |
 | `roteiro-apresentacao.md` | Roteiro de 16/11 por integrante |
+| `apresentacao/apresentacao-qts.pdf` | Slides da apresentacao de 16/11 |
 | `instrucoes-validacao-windows.md` | Prompt para Henrique e Rooch repetirem os testes no Windows e abrirem pull request |
 | `guias/guia-*.md` | Prompts de estudo para a apresentacao, um por integrante |
 | `evidencias/2026-10-29/` | Saidas reais, relatorios JUnit, artefatos do Actions, prints, log da camada |

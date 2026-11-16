@@ -4,6 +4,9 @@ Ordem sugerida: sistema e regra, qualidade, Teste 1, falha e correcao, Teste 2, 
 Cada integrante explica a propria parte e os conceitos que usou.
 
 ## Antes de comecar (preparo)
+- Slides: `qts/apresentacao/apresentacao-qts.pdf` (25 slides). Parte 1: custo da qualidade (1 a 9).
+  Parte 2: Teste 1 (10 a 19, Jhonatan e Thiago). Parte 3: qualidade e Teste 2 (20 a 24, Gabriel,
+  Henrique e Rooch). Referencias no 25.
 - Ter clonado o repositorio e criado o `.venv` (README, passos 1 e 2) no notebook da apresentacao.
 - Testar no Windows, antes do dia, os passos 3 e 4 do README (pytest e camada + Postman).
 - Abas abertas: repositorio no GitHub, execucoes 1 e 2 do Actions, Postman com a colecao importada.
